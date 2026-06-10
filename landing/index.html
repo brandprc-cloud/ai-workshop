@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Workshop — 2 дня в Дубае для владельцев бизнеса</title>
+  <meta name="description" content="Практический офлайн-воркшоп по AI для владельцев бизнеса в Дубае. 2 дня практики — понимаете AI изнутри, находите где бизнес теряет деньги, опережаете конкурентов." />
+  <meta property="og:title" content="AI Workshop — 2 дня в Дубае для владельцев бизнеса" />
+  <meta property="og:description" content="Практический офлайн-воркшоп по AI. 2 дня практики — уходите с работающим AI-инструментом под вашу задачу." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23FF6200'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,sans-serif' font-weight='900' font-size='18' fill='white'>AI</text></svg>" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config — цвета дизайн-системы -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark:    '#0E0B08',
+            light:   '#F5F0E8',
+            accent:  '#E8580A',
+            'accent-hover': '#D44A08',
+            'text-primary-dark':   '#FFFFFF',
+            'text-secondary-dark': '#B8AFA8',
+            'text-primary-light':  '#0E0B08',
+            'text-secondary-light':'#6B6460',
+          },
+          fontFamily: {
+            sans:  ["'Wix Madefor Display'", 'Inter', 'sans-serif'],
+            serif: ["'Playfair Display'", 'Georgia', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Кастомные стили -->
+  <link rel="stylesheet" href="./assets/css/custom.css" />
+</head>
+
+<body class="bg-dark text-white font-sans">
+
+<!-- ============================================================
+     НАВИГАЦИЯ — фиксированная
+     ============================================================ -->
+<nav data-testid="nav" class="nav-blur fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Логотип -->
+      <a href="#" class="flex items-center gap-2 flex-shrink-0">
+        <span class="text-accent font-black text-xl tracking-tight">AI</span>
+        <span class="text-white font-bold text-xl tracking-tight">Workshop</span>
+      </a>
+
+      <!-- Ссылки — десктоп -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#hero"         class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors sr-only">Главная</a>
+        <a href="#pain"         class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors sr-only">Боль</a>
+        <a href="#audience"     class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors sr-only">Аудитория</a>
+        <a href="#projects"     class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors sr-only">Задачи</a>
+        <a href="#program"      class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors">Программа</a>
+        <a href="#speaker"      class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors">Спикер</a>
+        <a href="#testimonials" class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors">Отзывы</a>
+        <a href="#offer"        class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors">Стоимость</a>
+        <a href="#apply"        class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors sr-only">Заявка</a>
+      </div>
+
+      <!-- Правая часть: переключатель языка + CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Переключатель языка -->
+        <div class="flex items-center gap-1 text-sm font-medium">
+          <span class="text-white bg-accent px-2 py-0.5 rounded text-xs font-bold">RU</span>
+          <a href="./en/" data-testid="lang-switch" class="text-[#CCCCCC] hover:text-white px-2 py-0.5 rounded text-xs transition-colors">EN</a>
+        </div>
+        <!-- CTA -->
+        <a href="#apply" class="btn-primary px-5 py-2 rounded-lg text-sm">Подать заявку</a>
+      </div>
+
+      <!-- Бургер — мобиле -->
+      <button id="burger-btn" data-testid="burger-menu" class="md:hidden flex flex-col justify-center items-center gap-1.5 p-2" aria-label="Меню">
+        <span class="burger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="burger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        <span class="burger-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+      </button>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div id="mobile-menu">
+      <div class="py-4 flex flex-col gap-4 border-t border-white/10">
+        <a href="#program"      class="text-[#CCCCCC] hover:text-white text-base font-medium transition-colors">Программа</a>
+        <a href="#speaker"      class="text-[#CCCCCC] hover:text-white text-base font-medium transition-colors">Спикер</a>
+        <a href="#testimonials" class="text-[#CCCCCC] hover:text-white text-base font-medium transition-colors">Отзывы</a>
+        <a href="#offer"        class="text-[#CCCCCC] hover:text-white text-base font-medium transition-colors">Стоимость</a>
+        <hr class="divider-dashed" />
+        <div class="flex items-center gap-2 text-sm font-medium">
+          <span class="text-white bg-accent px-2 py-0.5 rounded text-xs font-bold">RU</span>
+          <a href="./en/" data-testid="lang-switch-mobile" class="text-[#CCCCCC] hover:text-white px-2 py-0.5 rounded text-xs transition-colors">EN</a>
+        </div>
+        <a href="#apply" class="btn-primary px-5 py-3 rounded-lg text-sm text-center">Подать заявку</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     СЕКЦИЯ 1 — HERO (тёмный фон)
+     ============================================================ -->
+<section data-section="hero" id="hero" class="hero-spotlight aurora-bg relative overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32">
+  <!-- Сетка фона -->
+  <div class="grid-lines"></div>
+  <!-- Декоративные свечения -->
+  <div class="hero-glow"></div>
+  <div class="hero-glow-left"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl">
+
+      <!-- Бейдж -->
+      <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/25 rounded-full px-4 py-1.5 mb-8">
+        <span class="w-2 h-2 rounded-full bg-accent pulse-dot"></span>
+        <span class="text-accent text-sm font-sans font-semibold tracking-wide">Дубай · Практический офлайн-воркшоп</span>
+      </div>
+
+      <!-- Главный заголовок -->
+      <h1 class="text-[2.6rem] sm:text-5xl lg:text-[4.2rem] font-medium text-white leading-[1.15] mb-6">
+        2 дня — и ты знаешь<br class="hidden sm:block" />
+        как <span class="gradient-text">забрать рынок</span><br class="hidden sm:block" />
+        у конкурентов, которые<br class="hidden sm:block" />
+        об AI только читают
+      </h1>
+
+      <!-- Подзаголовок -->
+      <p class="text-text-secondary-dark font-sans text-lg sm:text-xl leading-relaxed mb-8 max-w-2xl">
+        Практический офлайн-воркшоп в Дубае: разбираешься в AI не по чужим словам, а руками.<br />
+        Выходишь с пониманием, что можно автоматизировать в твоём бизнесе прямо сейчас — и сколько это реально стоит.
+      </p>
+
+      <!-- Три буллета -->
+      <ul class="flex flex-col gap-4 mb-10 list-none p-0 m-0">
+        <li class="flex items-start gap-3">
+          <div class="bullet-icon" aria-hidden="true"></div>
+          <p class="text-text-secondary-dark font-sans text-base leading-relaxed">
+            <strong class="text-white font-semibold">Видишь, где теряешь деньги</strong> — конкретные задачи в твоём бизнесе, которые AI закрывает дешевле и быстрее любого подрядчика
+          </p>
+        </li>
+        <li class="flex items-start gap-3">
+          <div class="bullet-icon" aria-hidden="true"></div>
+          <p class="text-text-secondary-dark font-sans text-base leading-relaxed">
+            <strong class="text-white font-semibold">Понимаешь возможности раньше конкурентов</strong> — то, что 95% рынка ещё не пробовали руками, ты уже умеешь применять
+          </p>
+        </li>
+        <li class="flex items-start gap-3">
+          <div class="bullet-icon" aria-hidden="true"></div>
+          <p class="text-text-secondary-dark font-sans text-base leading-relaxed">
+            <strong class="text-white font-semibold">Делегируешь с контролем</strong> — ставишь задачи AI-инструментам сам, проверяешь результат, не переплачиваешь за «экспертизу»
+          </p>
+        </li>
+      </ul>
+
+      <!-- CTA-кнопки -->
+      <div class="flex flex-col sm:flex-row gap-4 mb-14">
+        <a href="#apply" data-testid="cta-primary" class="btn-primary px-8 py-4 rounded-xl text-base font-bold text-center">
+          Подать заявку
+        </a>
+        <a href="https://wa.me/971000000000" target="_blank" rel="noopener"
+           class="btn-outline-white px-8 py-4 rounded-xl text-base font-semibold text-center flex items-center justify-center gap-2">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 1.764.458 3.42 1.26 4.862L0 20l5.294-1.24A9.958 9.958 0 0010 20c5.523 0 10-4.477 10-10S15.523 0 10 0zm-1.5 5.5c-.28 0-.72.1-.972.372C7.276 6.144 6.5 6.9 6.5 8.25c0 1.35 1.034 2.658 1.178 2.842.144.184 2.028 3.096 4.956 4.347.692.3 1.232.478 1.654.611.694.221 1.325.19 1.824.115.556-.083 1.714-.702 1.955-1.38.24-.677.24-1.258.168-1.38-.072-.12-.264-.192-.552-.336s-1.703-.842-1.966-.937c-.264-.096-.456-.144-.648.144-.192.288-.744.936-.912 1.128-.168.192-.336.216-.624.072-.288-.144-1.216-.448-2.316-1.428-.856-.762-1.434-1.703-1.602-1.991-.168-.288-.018-.443.126-.587.13-.13.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.56-.888-2.136C9.27 5.78 9.02 5.5 8.5 5.5z" fill="currentColor"/>
+          </svg>
+          Написать в WhatsApp
+        </a>
+      </div>
+
+      <!-- Метрики -->
+      <div class="grid grid-cols-3 gap-6 max-w-lg">
+        <div class="text-center" data-testid="metric-participants">
+          <div class="metric-number">47</div>
+          <div class="text-[#CCCCCC] text-sm mt-1">участников</div>
+        </div>
+        <div class="text-center" data-testid="metric-group">
+          <div class="metric-number">10</div>
+          <div class="text-[#CCCCCC] text-sm mt-1">человек в группе</div>
+        </div>
+        <div class="text-center" data-testid="metric-days">
+          <div class="metric-number">2</div>
+          <div class="text-[#CCCCCC] text-sm mt-1">дня в Дубае</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     СЕКЦИЯ 2 — БОЛЬ + ДО/ПОСЛЕ (тёмный фон)
+     ============================================================ -->
+<section data-section="pain" id="pain" class="bg-dark py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <hr class="divider-dashed mb-20" />
+
+    <!-- Заголовок -->
+    <div class="mb-14">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">Узнаёшь себя?</h2>
+    </div>
+
+    <!-- 4 боли -->
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-20 list-none p-0 m-0">
+
+      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
+        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
+        <p class="text-[#CCCCCC] text-base leading-relaxed">
+          Платишь подрядчикам за AI-задачи — и не понимаешь, нормальная это цена или тебя разводят
+        </p>
+      </li>
+
+      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
+        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
+        <p class="text-[#CCCCCC] text-base leading-relaxed">
+          Слышишь про ChatGPT, автоматизацию, AI-агентов — но конкретно для твоего бизнеса непонятно, с чего начать
+        </p>
+      </li>
+
+      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
+        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
+        <p class="text-[#CCCCCC] text-base leading-relaxed">
+          Пробовал нанять кого-то «разобраться с AI» — получил красивую презентацию и ничего работающего
+        </p>
+      </li>
+
+      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
+        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
+        <p class="text-[#CCCCCC] text-base leading-relaxed">
+          Конкуренты что-то внедряют, ты видишь результат, но не знаешь, как они это делают
+        </p>
+      </li>
+
+    </ul>
+
+    <!-- До/После -->
+    <h3 class="text-2xl sm:text-3xl font-black text-white mb-8">Что меняется после двух дней</h3>
+
+    <div class="overflow-x-auto rounded-2xl">
+      <table class="before-after-table w-full text-sm">
+        <thead>
+          <tr>
+            <th class="text-left p-4 rounded-tl-2xl w-1/2">Раньше</th>
+            <th class="text-left p-4 rounded-tr-2xl w-1/2" style="background:rgba(255,98,0,0.2);color:#FF6200;">Сейчас</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-4 text-[#CCCCCC] align-top">Платишь подрядчику 1500 AED за простого бота — ждёшь неделю, получаешь не то</td>
+            <td class="p-4 text-white align-top">Понимаешь задачу изнутри, ставишь её точно — платишь в 3 раза меньше и получаешь быстрее</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[#CCCCCC] align-top">Хочешь лендинг — идёшь в агентство, платишь за разработку</td>
+            <td class="p-4 text-white align-top">Знаешь, как собрать рабочий лендинг за один день, и понимаешь, за что реально стоит платить</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[#CCCCCC] align-top">Клиенты в WhatsApp — обрабатываешь вручную, теряешь лиды</td>
+            <td class="p-4 text-white align-top">Настраиваешь автоматическую квалификацию: бот отсеивает нецелевых, нужные — тебе</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[#CCCCCC] align-top">Записи встреч копятся, никто не слушает</td>
+            <td class="p-4 text-white align-top">Транскрипт митинга → задачи в чат команды автоматически</td>
+          </tr>
+          <tr>
+            <td class="p-4 text-[#CCCCCC] align-top rounded-bl-2xl">CRM стоит, данные устаревают</td>
+            <td class="p-4 text-white align-top rounded-br-2xl">AI сам напоминает, поздравляет, делает follow-up — без менеджера</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     СЕКЦИЯ 3 — КОМУ ПОДХОДИТ (светлый фон)
+     ============================================================ -->
+<section data-section="audience" id="audience" class="bg-light py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Заголовок -->
+    <div class="mb-14">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] mb-3">Для кого этот воркшоп</h2>
+      <p class="text-[#555555] text-lg">Воркшоп для тебя, если:</p>
+    </div>
+
+    <!-- 6 характеристик -->
+    <ul data-testid="fits-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16 list-none p-0 m-0">
+
+      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
+        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="text-[#111111] text-base leading-relaxed">
+          Ты владелец бизнеса или управляющий — и в твоей работе есть рутина, которую можно передать инструментам
+        </p>
+      </li>
+
+      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
+        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="text-[#111111] text-base leading-relaxed">
+          Ты не технарь и не хочешь им становиться — хочешь понимать AI ровно настолько, чтобы управлять им, а не зависеть от тех, кто «умеет»
+        </p>
+      </li>
+
+      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
+        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="text-[#111111] text-base leading-relaxed">
+          Ты устал платить подрядчикам за непонятные задачи и не можешь оценить их работу
+        </p>
+      </li>
+
+      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
+        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="text-[#111111] text-base leading-relaxed">
+          У тебя есть конкретная задача — квалификация лидов, работа с базой, автоматизация коммуникаций — и ты хочешь разобраться с ней под руководством
+        </p>
+      </li>
+
+      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
+        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="text-[#111111] text-base leading-relaxed">
+          Тебе важна практика, а не теория: ты приходишь работать, а не слушать лекции
+        </p>
+      </li>
+
+      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
+        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="text-[#111111] text-base leading-relaxed">
+          Ты готов потратить 2 дня, чтобы сэкономить месяцы проб и ошибок
+        </p>
+      </li>
+
+    </ul>
+
+    <!-- Блок — воркшоп НЕ для вас -->
+    <div class="bg-[#111111] rounded-2xl p-8 border border-[#333333]">
+      <h3 class="text-xl font-bold text-white mb-6">Воркшоп не для вас, если...</h3>
+      <ul data-testid="not-fits-list" class="flex flex-col gap-5 list-none p-0 m-0">
+
+        <li class="flex items-start gap-4">
+          <div class="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2 2L8 8M8 2L2 8" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="text-[#CCCCCC] text-base leading-relaxed">
+            У вас пока нет конкретной задачи или проекта — воркшоп устроен так, что весь второй день вы работаете над своей реальной задачей. Без неё второй день теряет смысл
+          </p>
+        </li>
+
+        <li class="flex items-start gap-4">
+          <div class="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2 2L8 8M8 2L2 8" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="text-[#CCCCCC] text-base leading-relaxed">
+            Вы не готовы тратить 12 часов на освоение нового инструмента — здесь нет пассивного слушания, вы работаете руками и головой оба дня
+          </p>
+        </li>
+
+        <li class="flex items-start gap-4">
+          <div class="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2 2L8 8M8 2L2 8" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="text-[#CCCCCC] text-base leading-relaxed">
+            Вы убеждены, что AI — не ваша тема — не приходите. Мы не будем спорить и не станем принимать оплату. Воркшоп работает только с теми, кто открыт к новому
+          </p>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     СЕКЦИЯ 4 — 8 ЗАДАЧ (светлый фон)
+     ============================================================ -->
+<section data-section="projects" id="projects" class="bg-light py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <hr class="divider-dashed-light mb-20" />
+
+    <!-- Заголовок -->
+    <div class="mb-6">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] mb-4">8 задач, которые разбирают на воркшопе</h2>
+      <p class="text-[#555555] text-base sm:text-lg leading-relaxed max-w-3xl">
+        Каждый участник выбирает свою задачу. Арташес помогает её понять, разобрать архитектуру и запустить.
+        Список — не программа «от А до Я», а меню: берёшь то, что нужно твоему бизнесу.
+      </p>
+    </div>
+
+    <!-- Сетка 2×4 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-12">
+
+      <!-- A -->
+      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
+        <div class="text-5xl font-black text-accent mb-3 leading-none">A</div>
+        <h3 class="text-[#111111] font-bold text-lg mb-2">Бот-квиз для диагностики клиентов</h3>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Клиент приходит — бот задаёт вопросы, квалифицирует, передаёт тебе только целевых. Экономишь время менеджеров, не теряешь лиды.
+        </p>
+      </div>
+
+      <!-- B -->
+      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
+        <div class="text-5xl font-black text-accent mb-3 leading-none">B</div>
+        <h3 class="text-[#111111] font-bold text-lg mb-2">Лендинг — понимаешь как это работает</h3>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Не «сделать лендинг», а разобраться: что за ним стоит, сколько это реально стоит, где тебя обманывают подрядчики. Плюс — собираешь простой рабочий сайт за один день.
+        </p>
+      </div>
+
+      <!-- C -->
+      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
+        <div class="text-5xl font-black text-accent mb-3 leading-none">C</div>
+        <h3 class="text-[#111111] font-bold text-lg mb-2">WhatsApp-автоматизация</h3>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Рассылка по базе → автоматическая квалификация ответов. Кто интересуется — попадает в воронку. Кто нет — не занимает время команды.
+        </p>
+      </div>
+
+      <!-- D -->
+      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
+        <div class="text-5xl font-black text-accent mb-3 leading-none">D</div>
+        <h3 class="text-[#111111] font-bold text-lg mb-2">Парсер чатов и каналов</h3>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Мониторинг конкурентов, отраслевых каналов, упоминаний. AI собирает и структурирует — ты получаешь дайджест, а не поток сырых данных.
+        </p>
+      </div>
+
+      <!-- E -->
+      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
+        <div class="text-5xl font-black text-accent mb-3 leading-none">E</div>
+        <h3 class="text-[#111111] font-bold text-lg mb-2">Митинги → задачи</h3>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Запись встречи (Zoom, Google Meet) → транскрипт → Claude вычленяет задачи → они автоматически уходят в чат команды. Встречи больше не теряются.
+        </p>
+      </div>
+
+      <!-- F -->
+      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
+        <div class="text-5xl font-black text-accent mb-3 leading-none">F</div>
+        <h3 class="text-[#111111] font-bold text-lg mb-2">CRM-агент</h3>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Автоматические поздравления, follow-up после встречи, напоминания о продлении. AI работает с твоей базой — ты не забываешь про клиентов, которые «почти готовы».
+        </p>
+      </div>
+
+      <!-- G -->
+      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
+        <div class="text-5xl font-black text-accent mb-3 leading-none">G</div>
+        <h3 class="text-[#111111] font-bold text-lg mb-2">Автоответчик в личных сообщениях и комментариях</h3>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          AI отвечает на типовые вопросы в Instagram, Telegram, отрабатывает возражения, передаёт горячих — менеджеру. Без ботов-роботов, которые всех раздражают.
+        </p>
+      </div>
+
+      <!-- H -->
+      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
+        <div class="text-5xl font-black text-accent mb-3 leading-none">H</div>
+        <h3 class="text-[#111111] font-bold text-lg mb-2">Парсер сайтов</h3>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Мониторинг цен конкурентов, анализ предложений на рынке. Знаешь, что происходит — раньше, чем это замечают другие.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     СЕКЦИЯ 5 — ПРОГРАММА (светлый фон)
+     ============================================================ -->
+<section data-section="program" id="program" class="bg-light py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <hr class="divider-dashed-light mb-20" />
+
+    <!-- Заголовок -->
+    <div class="mb-4">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] mb-3">Что происходит 2 дня</h2>
+      <p class="text-[#555555] text-base sm:text-lg max-w-2xl">
+        Никаких презентаций ради галочки. Арташес работает рядом, отвечает на вопросы в процессе — не после.
+      </p>
+    </div>
+
+    <!-- Два дня -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+
+      <!-- День 1 -->
+      <div class="card-float-light rounded-2xl p-8">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">День 1</div>
+          <h3 class="text-[#111111] font-black text-xl">Перестать бояться</h3>
+        </div>
+
+        <!-- Таймлайн -->
+        <div class="flex flex-col gap-0">
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-accent text-xs font-bold mb-1">10:00</div>
+              <div class="text-[#111111] font-semibold text-sm mb-1">Промптинг как навык</div>
+              <p class="text-[#555555] text-sm leading-relaxed">Живое задание с первых минут. Учишься ставить задачи AI так, чтобы получать нужный результат — это навык, не магия.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-accent text-xs font-bold mb-1">11:30</div>
+              <div class="text-[#111111] font-semibold text-sm mb-1">Личный сайт-визитка за 40 минут</div>
+              <p class="text-[#555555] text-sm leading-relaxed">Барьер «это не моё, я не технарь» падает прямо здесь. Не потому что кто-то объяснил — потому что ты сам сделал.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-accent text-xs font-bold mb-1">14:00</div>
+              <div class="text-[#111111] font-semibold text-sm mb-1">Своя инфраструктура</div>
+              <p class="text-[#555555] text-sm leading-relaxed">VPS, Claude Code, Telegram-бот. Разбираешься, что это и зачем — на уровне пользователя, не разработчика.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="pb-4">
+              <div class="text-accent text-xs font-bold mb-1">16:00</div>
+              <div class="text-[#111111] font-semibold text-sm mb-1">Голосовой ввод Whisperflow</div>
+              <p class="text-[#555555] text-sm leading-relaxed">Диктуешь голосом → получаешь структурированный текст, задачи, письма. Инструмент, который меняет ежедневную работу с первого дня.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Итог дня -->
+        <div class="mt-6 bg-accent/10 border border-accent/25 rounded-xl p-4">
+          <p class="text-accent font-semibold text-sm leading-relaxed">
+            &#x2713; Итог дня 1: ты уже сделал что-то руками, у тебя новое понимание что возможно — и конкретная задача для второго дня.
+          </p>
+        </div>
+      </div>
+
+      <!-- День 2 -->
+      <div class="card-float-light rounded-2xl p-8">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="bg-[#111111] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">День 2</div>
+          <h3 class="text-[#111111] font-black text-xl">Твой проект</h3>
+        </div>
+
+        <!-- Таймлайн -->
+        <div class="flex flex-col gap-0">
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-accent text-xs font-bold mb-1">10:00</div>
+              <div class="text-[#111111] font-semibold text-sm mb-1">Индивидуальный разбор твоей задачи</div>
+              <p class="text-[#555555] text-sm leading-relaxed">Арташес смотрит на твой бизнес конкретно: где узкое место, что реально автоматизировать, что не стоит трогать.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-accent text-xs font-bold mb-1">11:30</div>
+              <div class="text-[#111111] font-semibold text-sm mb-1">Архитектура под твой бизнес</div>
+              <p class="text-[#555555] text-sm leading-relaxed">Не шаблон, а логика: как устроен инструмент, какие части нужны именно тебе, что можно упростить.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-accent text-xs font-bold mb-1">13:30</div>
+              <div class="text-[#111111] font-semibold text-sm mb-1">Совместная сборка</div>
+              <p class="text-[#555555] text-sm leading-relaxed">Работаешь руками. Арташес рядом — направляет, объясняет, если застрял. Не делает за тебя.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="pb-4">
+              <div class="text-accent text-xs font-bold mb-1">16:30</div>
+              <div class="text-[#111111] font-semibold text-sm mb-1">Запуск и план следующего шага</div>
+              <p class="text-[#555555] text-sm leading-relaxed">Проект запускается. Разбираете, что дальше: как масштабировать, кому передать, как контролировать.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Итог дня -->
+        <div class="mt-6 bg-accent/10 border border-accent/25 rounded-xl p-4">
+          <p class="text-accent font-semibold text-sm leading-relaxed">
+            &#x2713; Итог дня 2: понимание как строить AI-инструменты под свои задачи. 96% участников уходят со второго дня с готовым решением под свою задачу.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     СЕКЦИЯ 6 — СПИКЕР (тёмный фон)
+     ============================================================ -->
+<section data-section="speaker" id="speaker" class="aurora-bg relative overflow-hidden py-20 sm:py-28">
+  <div class="grid-lines"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <hr class="divider-dashed mb-16" />
+
+    <!-- Label -->
+    <div class="label-tag mb-6">Ведущий воркшопа</div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+
+      <!-- Фото слева -->
+      <div class="flex justify-center lg:justify-start">
+        <div class="speaker-photo-wrap float-anim">
+          <img src="./assets/img/artashes.jpg" alt="Арташес Григорян — ведущий AI Workshop" />
+          <div class="speaker-photo-glow"></div>
+        </div>
+      </div>
+
+      <!-- Текст справа -->
+      <div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium text-white leading-tight mb-2">
+          Арташес Григорян
+        </h2>
+        <p class="text-accent font-sans font-semibold text-base tracking-wide mb-8">топ-5 брокер Whitewheel · Дубай</p>
+
+        <p class="text-text-secondary-dark font-sans text-base leading-relaxed mb-5">
+          Арташес не консультант, который рассказывает про AI по чужим кейсам.
+        </p>
+        <p class="text-text-secondary-dark font-sans text-base leading-relaxed mb-8">
+          Он строит AI-системы для своих бизнесов, потому что это даёт реальное конкурентное преимущество. Не потому что это модно.
+        </p>
+
+        <!-- Продукты -->
+        <div class="flex flex-col gap-3 mb-8">
+          <div class="card-float-dark rounded-xl p-5 accent-bar">
+            <div class="font-sans font-semibold text-white mb-1 text-sm">brochurefinderbot.com</div>
+            <p class="text-text-secondary-dark font-sans text-sm leading-relaxed">
+              AI-бот для поиска брошюр недвижимости. <strong class="text-white">6500+ активных пользователей.</strong> Работает без менеджеров.
+            </p>
+          </div>
+          <div class="card-float-dark rounded-xl p-5 accent-bar">
+            <div class="font-sans font-semibold text-white mb-1 text-sm">distressfinder.com</div>
+            <p class="text-text-secondary-dark font-sans text-sm leading-relaxed">
+              AI-агрегатор для анализа сделок с дисконтом на рынке Дубая. Экономит часы ручного поиска.
+            </p>
+          </div>
+        </div>
+
+        <!-- Цитата -->
+        <blockquote class="blockquote-styled card-float-dark rounded-xl p-6 pl-8 mb-8">
+          <p class="testimonial-quote mt-4">
+            «Никаких обещаний результата: ты сделаешь то, что хочешь, под моим руководством»
+          </p>
+        </blockquote>
+
+        <!-- Статы -->
+        <div class="grid grid-cols-3 gap-3">
+          <div class="card-float-dark rounded-xl p-4 text-center">
+            <div class="metric-number text-2xl sm:text-3xl">47</div>
+            <div class="text-text-secondary-dark font-sans text-xs mt-1">участников</div>
+          </div>
+          <div class="card-float-dark rounded-xl p-4 text-center">
+            <div class="metric-number text-xl sm:text-2xl">6500+</div>
+            <div class="text-text-secondary-dark font-sans text-xs mt-1">пользователей</div>
+          </div>
+          <div class="card-float-dark rounded-xl p-4 text-center">
+            <div class="metric-number text-2xl sm:text-3xl">96%</div>
+            <div class="text-text-secondary-dark font-sans text-xs mt-1">успешных</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     СЕКЦИЯ 7 — ОТЗЫВЫ (тёмный фон — как на сайте Арташеса)
+     ============================================================ -->
+<section data-section="testimonials" id="testimonials" class="aurora-bg relative overflow-hidden py-20 sm:py-28">
+  <div class="grid-lines"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <hr class="divider-dashed mb-16" />
+
+    <!-- Заголовок -->
+    <div class="mb-4">
+      <div class="label-tag mb-4">Отзывы участников</div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium text-white mb-4">Что говорят те,<br />кто прошёл</h2>
+      <p class="text-text-secondary-dark font-sans text-base sm:text-lg max-w-2xl leading-relaxed">
+        Видео сняты на выходе сразу после второго дня. Цитаты — из сообщений участников вечером Дня 1 и после Дня 2. Без подготовки, без редактуры.
+      </p>
+    </div>
+
+    <!-- Видео-отзывы -->
+    <div class="video-grid mt-12 mb-16">
+
+      <div class="video-thumb card-3d">
+        <div class="video-thumb-bg">
+          <div style="width:100%;height:100%;background:linear-gradient(160deg,#2A1810 0%,#1C1612 100%);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 80 120" fill="none" style="width:40%;opacity:0.15">
+              <ellipse cx="40" cy="35" rx="22" ry="24" fill="white"/>
+              <path d="M5 120 C5 80 75 80 75 120" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="play-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="video-thumb-label">
+          участница, MBA<br />10+ лет управления бизнесами
+        </div>
+      </div>
+
+      <div class="video-thumb card-3d">
+        <div class="video-thumb-bg">
+          <div style="width:100%;height:100%;background:linear-gradient(160deg,#1C2010 0%,#1C1612 100%);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 80 120" fill="none" style="width:40%;opacity:0.15">
+              <ellipse cx="40" cy="35" rx="22" ry="24" fill="white"/>
+              <path d="M5 120 C5 80 75 80 75 120" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="play-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="video-thumb-label">
+          предприниматель<br />Дубай
+        </div>
+      </div>
+
+      <div class="video-thumb card-3d">
+        <div class="video-thumb-bg">
+          <div style="width:100%;height:100%;background:linear-gradient(160deg,#201820 0%,#1C1612 100%);display:flex;align-items:center;justify-content:center;">
+            <svg viewBox="0 0 80 120" fill="none" style="width:40%;opacity:0.15">
+              <ellipse cx="40" cy="35" rx="22" ry="24" fill="white"/>
+              <path d="M5 120 C5 80 75 80 75 120" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="play-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="video-thumb-label">
+          участница<br />вечер после Дня 1
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Цитаты — большие, serif italic как на сайте Арташеса -->
+    <div class="max-w-3xl mx-auto flex flex-col gap-14">
+
+      <div data-testid="testimonial-item">
+        <p class="testimonial-quote mb-5">
+          «Сегодня мой мир перевернулся на 180 градусов. Прошло 10 лет, когда я закончила MBA по управлению предприятием с оборотом 10+ млрд — и такие были личные кейсы. Но сегодня — это открытие новой Вселенной для всех направлений бизнеса.»
+        </p>
+        <div class="text-text-secondary-dark font-sans text-sm">— участница, MBA, 10+ лет управления бизнесами от 10 млрд</div>
+      </div>
+
+      <div data-testid="testimonial-item">
+        <p class="testimonial-quote mb-5">
+          «За 40 лет я не был ни на одном обучении. На твоё решил сходить — и не прогадал. Реально очень крутое обучение на сегодняшний день на рынке ОАЭ.»
+        </p>
+        <div class="text-text-secondary-dark font-sans text-sm">— участник, предприниматель, Дубай</div>
+      </div>
+
+      <div data-testid="testimonial-item">
+        <p class="testimonial-quote mb-5">
+          «Я сегодня не только научилась работать с AI — я сегодня просто расширила своё сознание. И в прямом, и в переносном смысле.»
+        </p>
+        <div class="text-text-secondary-dark font-sans text-sm">— участница, вечером после Дня 1</div>
+      </div>
+
+      <div data-testid="testimonial-item">
+        <p class="testimonial-quote mb-5">
+          «После тренинга мозг взрывается. Идея за идеей приходят, я капец как упрощаю работу — уже можно применять и работать.»
+        </p>
+        <div class="text-text-secondary-dark font-sans text-sm">— участник, после Дня 2</div>
+      </div>
+
+      <!-- Итог -->
+      <div class="card-float-dark rounded-2xl p-6 text-center">
+        <div class="metric-number mb-2">96%</div>
+        <p class="text-text-secondary-dark font-sans text-base leading-relaxed">
+          участников уходят со второго дня с готовым решением под свою задачу.<br />
+          <span class="text-white font-semibold">47 выпускников. Первые — топовые риелторы и владельцы агентств Дубая.</span>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     СЕКЦИЯ 8 — ОФФЕР (тёмный фон)
+     ============================================================ -->
+<section data-section="offer" id="offer" class="bg-dark py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <hr class="divider-dashed mb-20" />
+
+    <!-- Заголовок -->
+    <div class="mb-12">
+      <div class="inline-flex items-baseline gap-3 mb-3">
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-accent">2000 AED</h2>
+        <span class="text-white text-2xl font-bold">— что входит</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+      <!-- Левый столбец -->
+      <div>
+        <!-- Что включено -->
+        <h3 class="text-white font-bold text-lg mb-5">Включено в стоимость</h3>
+        <div class="flex flex-col gap-3 mb-10">
+
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="text-[#CCCCCC] text-base leading-relaxed">2 полных дня практики с Арташесом (10:00–18:00)</p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="text-[#CCCCCC] text-base leading-relaxed">Группа максимум 10 человек — Арташес успевает разобрать задачу каждого</p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="text-[#CCCCCC] text-base leading-relaxed">Индивидуальный разбор твоего бизнеса и твоей задачи на второй день</p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="text-[#CCCCCC] text-base leading-relaxed">Доступ к материалам и инструкциям после воркшопа</p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="text-[#CCCCCC] text-base leading-relaxed">Чат группы — можно задавать вопросы после</p>
+          </div>
+
+        </div>
+
+        <!-- Дополнительные расходы -->
+        <h3 class="text-white font-bold text-lg mb-3">Дополнительные расходы</h3>
+        <p class="text-[#CCCCCC] text-sm mb-4">Эти расходы не входят в стоимость — рассчитывай заранее:</p>
+        <div class="flex flex-col gap-3 mb-10">
+          <div class="card-float-dark rounded-xl p-4">
+            <div class="text-white font-semibold text-sm mb-1">Claude Max</div>
+            <p class="text-[#CCCCCC] text-sm leading-relaxed">Подписка на AI — около <strong class="text-white">500 AED в месяц</strong>. Используется на воркшопе и после. Можно отменить в любой момент.</p>
+          </div>
+          <div class="card-float-dark rounded-xl p-4">
+            <div class="text-white font-semibold text-sm mb-1">VPS</div>
+            <p class="text-[#CCCCCC] text-sm leading-relaxed">Виртуальный сервер — от <strong class="text-white">50 AED в месяц</strong>. Нужен для запуска инструментов.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Правый столбец -->
+      <div>
+        <!-- Практическая информация -->
+        <h3 class="text-white font-bold text-lg mb-5">Практическая информация</h3>
+        <div class="card-float-dark rounded-2xl p-6 mb-8">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <span class="text-accent text-lg">&#128344;</span>
+              <div>
+                <div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">Время</div>
+                <div class="text-white font-semibold text-sm">10:00–18:00, оба дня</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-accent text-lg">&#128205;</span>
+              <div>
+                <div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">Место</div>
+                <div class="text-white font-semibold text-sm">Дубай (точный адрес — после подтверждения участия)</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-accent text-lg">&#128187;</span>
+              <div>
+                <div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">Что взять</div>
+                <div class="text-white font-semibold text-sm">Ноутбук + карта для оплаты подписок (~500 AED на расходы)</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-accent text-lg">&#127759;</span>
+              <div>
+                <div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">Язык</div>
+                <div class="text-white font-semibold text-sm">Русский</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Гарантия -->
+        <div class="border border-accent/30 bg-accent/5 rounded-2xl p-6 mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-accent text-lg">&#128737;</span>
+            <h3 class="text-white font-bold text-base">Гарантия</h3>
+          </div>
+          <p class="text-[#CCCCCC] text-sm leading-relaxed mb-3">
+            Арташес работает с тобой оба дня. Если к концу второго дня ты понимаешь, что воркшоп тебе не дал ничего нового — напиши ему лично. Разберём вместе.
+          </p>
+          <p class="text-[#CCCCCC] text-sm italic">
+            Это не юридическая формула. Это отношение к участникам.
+          </p>
+        </div>
+
+        <!-- CTA -->
+        <a href="#apply" class="btn-primary w-full py-4 rounded-xl text-base font-bold text-center block">
+          Подать заявку
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     СЕКЦИЯ 9 — ЗАЯВКА (anchor для навигации)
+     ============================================================ -->
+<section data-section="apply" id="apply" class="aurora-bg py-20 sm:py-24">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+    <hr class="divider-dashed mb-16" />
+
+    <div class="label-tag mb-6">Участие</div>
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium text-white mb-5">
+      Готовы к двум дням,<br />которые изменят ваш бизнес?
+    </h2>
+    <p class="text-text-secondary-dark font-sans text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-10">
+      Арташес лично читает каждую заявку. Группа до 10 человек — участников отбирают, чтобы два дня были продуктивными для всех.
+    </p>
+    <button onclick="openApplyModal()" class="btn-primary px-10 py-4 rounded-xl text-base">
+      Подать заявку
+    </button>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     MODAL — Форма заявки
+     ============================================================ -->
+<div class="modal-overlay" id="apply-modal" role="dialog" aria-modal="true" aria-label="Форма заявки">
+  <div class="modal-box">
+
+    <!-- Закрыть -->
+    <button class="modal-close" onclick="closeApplyModal()" aria-label="Закрыть">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M13 1L1 13" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <!-- Заголовок -->
+    <div class="mb-7 pr-8">
+      <div class="label-tag mb-3">Участие</div>
+      <h3 class="text-2xl sm:text-3xl font-medium text-white mb-2">Подать заявку</h3>
+      <p class="text-text-secondary-dark font-sans text-sm leading-relaxed">
+        После заявки — Арташес напишет в Telegram и подтвердит участие.
+      </p>
+    </div>
+
+    <!-- Форма -->
+    <form data-form="apply" data-testid="form-apply" id="apply-form" novalidate>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+
+          <!-- 1. Сайт -->
+          <div class="sm:col-span-2">
+            <label for="field-site" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Ваш сайт <span class="text-[#555555]">(необязательно)</span>
+            </label>
+            <input
+              type="url"
+              id="field-site"
+              name="site"
+              placeholder="https://yoursite.com"
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm"
+            />
+          </div>
+
+          <!-- 2. Имя -->
+          <div>
+            <label for="field-name" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Имя <span class="text-accent">*</span>
+            </label>
+            <input
+              type="text"
+              id="field-name"
+              name="name"
+              placeholder="Как к вам обращаться"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm"
+            />
+          </div>
+
+          <!-- 3. Telegram -->
+          <div>
+            <label for="field-telegram" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Telegram <span class="text-accent">*</span>
+            </label>
+            <input
+              type="text"
+              id="field-telegram"
+              name="telegram"
+              placeholder="@username"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm"
+            />
+          </div>
+
+          <!-- 4. Телефон или email -->
+          <div class="sm:col-span-2">
+            <label for="field-contact" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Телефон или email <span class="text-accent">*</span>
+            </label>
+            <input
+              type="text"
+              id="field-contact"
+              name="contact"
+              placeholder="+971 50 000 0000 или email@example.com"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm"
+            />
+          </div>
+
+          <!-- 5. Род деятельности -->
+          <div>
+            <label for="field-activity" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Род деятельности <span class="text-accent">*</span>
+            </label>
+            <select
+              id="field-activity"
+              name="activity"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer"
+            >
+              <option value="" disabled selected>Выберите вариант</option>
+              <option value="real-estate">Недвижимость / брокер / агентство</option>
+              <option value="retail">Розничная торговля / e-commerce</option>
+              <option value="b2b">Услуги для бизнеса (B2B)</option>
+              <option value="b2c">Услуги для частных клиентов (B2C)</option>
+              <option value="finance">Финансы / инвестиции</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+
+          <!-- 6. Город -->
+          <div>
+            <label for="field-city" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Город <span class="text-accent">*</span>
+            </label>
+            <input
+              type="text"
+              id="field-city"
+              name="city"
+              placeholder="Дубай, Москва, Алматы..."
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm"
+            />
+          </div>
+
+          <!-- 7. Предпочитаемая дата -->
+          <div class="sm:col-span-2">
+            <label for="field-date" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Предпочитаемая дата <span class="text-accent">*</span>
+            </label>
+            <select
+              id="field-date"
+              name="preferred_date"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer"
+            >
+              <option value="" disabled selected>Выберите удобный вариант</option>
+              <option value="nearest">Ближайшая доступная дата</option>
+              <option value="july-2026">Июль 2026</option>
+              <option value="august-2026">Август 2026</option>
+            </select>
+          </div>
+
+          <!-- 8. Задача — textarea -->
+          <div class="sm:col-span-2">
+            <label for="field-task" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Задача <span class="text-accent">*</span>
+            </label>
+            <textarea
+              id="field-task"
+              name="task"
+              rows="4"
+              placeholder="Опишите коротко: что хотите автоматизировать или с каким запросом идёте на воркшоп"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm resize-none"
+            ></textarea>
+          </div>
+
+          <!-- 9. Опыт с AI -->
+          <div>
+            <label for="field-experience" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Ваш опыт с AI <span class="text-accent">*</span>
+            </label>
+            <select
+              id="field-experience"
+              name="experience"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer"
+            >
+              <option value="" disabled selected>Выберите вариант</option>
+              <option value="none">Никакого — слышал, но не пробовал</option>
+              <option value="sometimes">Иногда использую ChatGPT или похожее</option>
+              <option value="regular">Регулярно использую AI-инструменты в работе</option>
+              <option value="implemented">Уже внедрял AI в процессы бизнеса</option>
+              <option value="technical">Технический бэкграунд, разбираюсь в теме</option>
+            </select>
+          </div>
+
+          <!-- 10. Откуда узнали -->
+          <div>
+            <label for="field-source" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Откуда узнали <span class="text-accent">*</span>
+            </label>
+            <select
+              id="field-source"
+              name="source"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer"
+            >
+              <option value="" disabled selected>Выберите вариант</option>
+              <option value="instagram">Instagram / Stories</option>
+              <option value="telegram">Telegram-канал</option>
+              <option value="referral">Рекомендация знакомого</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="event">Мероприятие / нетворкинг</option>
+              <option value="google">Поиск в Google</option>
+              <option value="artashes">От Арташеса лично</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Кнопка отправки -->
+        <button
+          type="submit"
+          data-testid="form-submit"
+          data-submit-id="submit-btn"
+          id="form-submit-btn"
+          class="btn-primary w-full py-4 rounded-xl text-base font-bold mt-2"
+        >
+          Отправить заявку
+        </button>
+
+      </form>
+
+      <!-- Success-блок (скрыт по умолчанию) -->
+      <div
+        data-success="true"
+        data-testid="success-block"
+        id="success-block"
+        class="hidden mt-4 text-center py-8"
+      >
+        <div class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#E8580A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="text-white text-2xl font-medium mb-3">Заявка принята</h3>
+        <p class="text-text-secondary-dark font-sans text-base leading-relaxed mb-8 max-w-sm mx-auto">
+          Арташес получил её и напишет вам в Telegram в течение дня.<br />
+          Если удобно — напишите ему сами, чтобы не ждать.
+        </p>
+        <a
+          href="https://t.me/ArtashesAIBot"
+          target="_blank"
+          rel="noopener"
+          data-testid="bot-link"
+          class="btn-primary inline-block px-10 py-4 rounded-xl text-base"
+        >
+          Открыть @ArtashesAIBot
+        </a>
+      </div>
+
+  </div><!-- .modal-box -->
+</div><!-- .modal-overlay #apply-modal -->
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="bg-[#050505] border-t border-white/8 py-12">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
+
+      <!-- Логотип и описание -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-accent font-black text-xl tracking-tight">AI</span>
+          <span class="text-white font-bold text-xl tracking-tight">Workshop</span>
+        </div>
+        <p class="text-[#CCCCCC] text-sm leading-relaxed">
+          Практический офлайн-воркшоп по AI для владельцев бизнеса.<br />
+          Дубай · Русский язык
+        </p>
+      </div>
+
+      <!-- Навигация -->
+      <div>
+        <div class="text-[#CCCCCC] text-xs uppercase tracking-widest font-semibold mb-4">Навигация</div>
+        <div class="flex flex-col gap-2">
+          <a href="#program"      class="text-[#CCCCCC] hover:text-white text-sm transition-colors">Программа</a>
+          <a href="#speaker"      class="text-[#CCCCCC] hover:text-white text-sm transition-colors">Спикер</a>
+          <a href="#testimonials" class="text-[#CCCCCC] hover:text-white text-sm transition-colors">Отзывы</a>
+          <a href="#offer"        class="text-[#CCCCCC] hover:text-white text-sm transition-colors">Стоимость</a>
+          <a href="#apply"        class="text-accent hover:text-white text-sm transition-colors font-semibold">Подать заявку</a>
+        </div>
+      </div>
+
+      <!-- Контакты -->
+      <div>
+        <div class="text-[#CCCCCC] text-xs uppercase tracking-widest font-semibold mb-4">Контакты</div>
+        <div class="flex flex-col gap-3">
+          <a
+            href="https://t.me/ArtashesAIBot"
+            target="_blank" rel="noopener"
+            class="flex items-center gap-2 text-[#CCCCCC] hover:text-white text-sm transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/>
+            </svg>
+            @ArtashesAIBot
+          </a>
+          <a
+            href="https://wa.me/971000000000"
+            target="_blank" rel="noopener"
+            class="flex items-center gap-2 text-[#CCCCCC] hover:text-white text-sm transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 1.764.458 3.42 1.26 4.862L0 20l5.294-1.24A9.958 9.958 0 0010 20c5.523 0 10-4.477 10-10S15.523 0 10 0zm-1.5 5.5c-.28 0-.72.1-.972.372C7.276 6.144 6.5 6.9 6.5 8.25c0 1.35 1.034 2.658 1.178 2.842.144.184 2.028 3.096 4.956 4.347.692.3 1.232.478 1.654.611.694.221 1.325.19 1.824.115.556-.083 1.714-.702 1.955-1.38.24-.677.24-1.258.168-1.38-.072-.12-.264-.192-.552-.336s-1.703-.842-1.966-.937c-.264-.096-.456-.144-.648.144-.192.288-.744.936-.912 1.128-.168.192-.336.216-.624.072-.288-.144-1.216-.448-2.316-1.428-.856-.762-1.434-1.703-1.602-1.991-.168-.288-.018-.443.126-.587.13-.13.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.56-.888-2.136C9.27 5.78 9.02 5.5 8.5 5.5z"/>
+            </svg>
+            WhatsApp
+          </a>
+          <a
+            href="mailto:hello@aiworkshop.international"
+            class="flex items-center gap-2 text-[#CCCCCC] hover:text-white text-sm transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            hello@aiworkshop.international
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="divider-dashed mb-6" />
+
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#555555]">
+      <span>&copy; 2026 AI Workshop. Все права защищены.</span>
+      <div class="flex items-center gap-3">
+        <span class="text-white bg-accent px-2 py-0.5 rounded font-bold">RU</span>
+        <a href="./en/" class="hover:text-white transition-colors">EN</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     JavaScript
+     ============================================================ -->
+<script>
+  // ---- Бургер-меню ----
+  (function () {
+    var btn   = document.getElementById('burger-btn');
+    var menu  = document.getElementById('mobile-menu');
+    var lines = btn.querySelectorAll('.burger-line');
+
+    btn.addEventListener('click', function () {
+      var isOpen = menu.classList.contains('open');
+      menu.classList.toggle('open');
+      if (!isOpen) {
+        lines[0].style.transform = 'translateY(8px) rotate(45deg)';
+        lines[1].style.opacity   = '0';
+        lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+      } else {
+        lines[0].style.transform = '';
+        lines[1].style.opacity   = '';
+        lines[2].style.transform = '';
+      }
+    });
+
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        menu.classList.remove('open');
+        lines[0].style.transform = '';
+        lines[1].style.opacity   = '';
+        lines[2].style.transform = '';
+      });
+    });
+  })();
+
+
+  // ---- Modal: открыть / закрыть ----
+  function openApplyModal() {
+    var modal = document.getElementById('apply-modal');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeApplyModal() {
+    var modal = document.getElementById('apply-modal');
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Закрывать при клике вне modal-box
+  document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById('apply-modal');
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeApplyModal();
+    });
+  });
+
+  // Все ссылки href="#apply" открывают modal
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href="#apply"], a[href*="#apply"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        openApplyModal();
+      });
+    });
+  });
+
+
+  // ---- Форма — submit → success ----
+  (function () {
+    var form         = document.getElementById('apply-form');
+    var successBlock = document.getElementById('success-block');
+    var submitBtn    = document.getElementById('form-submit-btn');
+
+    if (!form || !successBlock) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var required = form.querySelectorAll('[required]');
+      var valid = true;
+      required.forEach(function (field) {
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = '#E84545';
+          field.addEventListener('input', function () {
+            field.style.borderColor = '';
+          }, { once: true });
+        }
+      });
+      if (!valid) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Отправляю...';
+      submitBtn.style.opacity = '0.7';
+
+      setTimeout(function () {
+        form.style.display = 'none';
+        successBlock.classList.remove('hidden');
+      }, 300);
+    });
+  })();
+
+
+  // ---- Spotlight — Hero следит за курсором ----
+  (function () {
+    var hero = document.querySelector('[data-section="hero"]');
+    if (!hero) return;
+    hero.addEventListener('mousemove', function (e) {
+      var rect = hero.getBoundingClientRect();
+      var x = ((e.clientX - rect.left) / rect.width  * 100).toFixed(1) + '%';
+      var y = ((e.clientY - rect.top)  / rect.height * 100).toFixed(1) + '%';
+      hero.style.setProperty('--mx', x);
+      hero.style.setProperty('--my', y);
+    });
+  })();
+
+
+  // ---- 3D-карточки: наклон при наведении ----
+  (function () {
+    document.querySelectorAll('.card-3d').forEach(function (card) {
+      card.addEventListener('mousemove', function (e) {
+        var rect = card.getBoundingClientRect();
+        var cx = rect.left + rect.width  / 2;
+        var cy = rect.top  + rect.height / 2;
+        var rx = ((e.clientY - cy) / (rect.height / 2)) * -8;
+        var ry = ((e.clientX - cx) / (rect.width  / 2)) *  8;
+        card.style.transform = 'perspective(600px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+      });
+      card.addEventListener('mouseleave', function () {
+        card.style.transform = '';
+      });
+    });
+  })();
+
+
+  // ---- Подсветка активного пункта навигации при скролле ----
+  (function () {
+    var sections = document.querySelectorAll('[data-section]');
+    var navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+    function onScroll() {
+      var scrollY = window.scrollY + 100;
+      var current = '';
+      sections.forEach(function (s) {
+        if (s.offsetTop <= scrollY) current = s.getAttribute('data-section');
+      });
+      navLinks.forEach(function (link) {
+        link.classList.remove('text-white');
+        link.classList.add('text-[#B8AFA8]');
+        var href = link.getAttribute('href').replace('#', '');
+        if (href === current) {
+          link.classList.remove('text-[#B8AFA8]');
+          link.classList.add('text-white');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+
+</body>
+</html>
