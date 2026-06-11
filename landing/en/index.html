@@ -4,33 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Workshop — 2 Days in Dubai for Business Owners</title>
-  <meta name="description" content="Hands-on offline AI workshop for business owners in Dubai. 2 days of practice — you understand AI from the inside, find where your business loses money, and stay ahead of competitors." />
+  <meta name="description" content="Hands-on offline AI workshop for business owners in Dubai. 2 days of practice — you understand AI from the inside, find where your business loses money, stay ahead of competitors." />
   <meta property="og:title" content="AI Workshop — 2 Days in Dubai for Business Owners" />
   <meta property="og:description" content="Hands-on offline AI workshop. 2 days of practice — you leave with a working AI tool tailored to your task." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E87A2E'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,sans-serif' font-weight='900' font-size='18' fill='white'>AI</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23F97316'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,sans-serif' font-weight='900' font-size='18' fill='white'>AI</text></svg>" />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500&family=Wix+Madefor+Display:wght@400;500;600;700&display=swap" />
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            dark:    '#0D0F14',
-            light:   '#ECEDEF',
-            accent:  '#E87A2E',
-          },
-          fontFamily: {
-            sans:    ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Montserrat', 'Inter', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-
+  <link rel="stylesheet" href="../assets/css/tailwind.css" />
   <link rel="stylesheet" href="../assets/css/custom.css" />
 </head>
 
@@ -50,7 +34,7 @@
         <a href="#hero"         class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors sr-only">Home</a>
         <a href="#pain"         class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors sr-only">Pain</a>
         <a href="#audience"     class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors sr-only">Audience</a>
-        <a href="#projects"     class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors sr-only">Projects</a>
+        <a href="#projects"     class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors sr-only">Tasks</a>
         <a href="#program"      class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors">Program</a>
         <a href="#speaker"      class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors">Speaker</a>
         <a href="#testimonials" class="text-[#CCCCCC] hover:text-white text-sm font-medium transition-colors">Reviews</a>
@@ -81,7 +65,7 @@
         <a href="#offer"        class="text-[#CCCCCC] hover:text-white text-base font-medium transition-colors">Pricing</a>
         <hr class="divider-dashed" />
         <div class="flex items-center gap-2 text-sm font-medium">
-          <a href="../index.html" class="text-[#CCCCCC] hover:text-white px-2 py-0.5 rounded text-xs transition-colors">RU</a>
+          <a href="../index.html" data-testid="lang-switch-mobile" class="text-[#CCCCCC] hover:text-white px-2 py-0.5 rounded text-xs transition-colors">RU</a>
           <span class="text-white bg-accent px-2 py-0.5 rounded text-xs font-bold">EN</span>
         </div>
         <a href="#apply" class="btn-primary px-5 py-3 rounded-lg text-sm text-center">Apply Now</a>
@@ -92,533 +76,1167 @@
 
 
 <!-- SECTION 1: HERO -->
-<section data-section="hero" id="hero" class="relative bg-dark overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32">
-  <div class="hero-glow"></div>
-  <div class="hero-glow-left"></div>
-  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl">
+<section data-section="hero" id="hero" class="hero-spotlight aurora-bg relative overflow-hidden">
 
-      <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/25 rounded-full px-4 py-1.5 mb-8">
-        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-        <span class="text-accent text-sm font-semibold">Dubai · Hands-on Offline Workshop</span>
-      </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-24 sm:pt-28 pb-8 min-h-[94vh] flex flex-col">
 
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
-        2 days — and you know<br class="hidden sm:block" />
-        how to <span class="gradient-text">take the market</span><br class="hidden sm:block" />
-        from competitors who<br class="hidden sm:block" />
-        only read about AI
-      </h1>
+    <div class="flex justify-between items-start mb-10 sm:mb-14">
+      <span class="corner-label text-white">AI <span class="text-accent">&times;</span> BUSINESS</span>
+      <span class="corner-label text-right text-[#9BA1AB] hidden sm:block"><span class="text-accent">AI</span> — new<br />business infrastructure</span>
+    </div>
 
-      <p class="text-[#CCCCCC] text-lg sm:text-xl leading-relaxed mb-8 max-w-2xl">
-        A practical offline workshop in Dubai: you learn AI not from others' words, but with your own hands.<br />
-        You leave knowing what can be automated in your business right now — and what it actually costs.
-      </p>
+    <h1 class="hero-headline max-w-5xl mb-4 sm:mb-6">
+      <span class="block">2 days — and you know</span>
+      <span class="block">how to <span class="text-accent">take the market</span></span>
+      <span class="block">from competitors who</span>
+      <span class="block">only read about <span class="text-accent">AI</span></span>
+    </h1>
 
-      <ul class="flex flex-col gap-4 mb-10 list-none p-0 m-0">
+    <div class="corner-label text-accent mb-10 sm:mb-12" style="font-size:11px;letter-spacing:0.2em">for business owners</div>
+
+    <div class="flex flex-wrap items-center gap-6 sm:gap-10 mb-5">
+      <a href="#apply" data-testid="cta-primary" class="cta-journal">
+        Apply Now <span class="arrow">&#10142;</span>
+      </a>
+      <a href="https://wa.me/971000000000" target="_blank" rel="noopener"
+         class="text-[#9BA1AB] hover:text-white text-sm font-medium transition-colors">
+        or message on WhatsApp
+      </a>
+    </div>
+
+    <div class="flex-grow"></div>
+
+    <div class="max-w-2xl">
+      <div class="corner-label text-accent mb-5" style="font-size:13px">Check yourself</div>
+      <ul class="journal-bullets list-none p-0 m-0 mb-10">
         <li class="flex items-start gap-3">
-          <div class="bullet-icon mt-0.5" aria-hidden="true">&#9679;</div>
-          <p class="text-[#CCCCCC] text-base leading-relaxed">
-            <strong class="text-white">See where you're losing money</strong> — specific tasks in your business that AI handles cheaper and faster than any contractor
+          <p class="text-[#9BA1AB] text-base sm:text-lg leading-relaxed">
+            <strong class="text-white font-medium">See where you're losing money</strong> — specific tasks in your business that AI handles cheaper and faster than any contractor
           </p>
         </li>
         <li class="flex items-start gap-3">
-          <div class="bullet-icon mt-0.5" aria-hidden="true">&#9679;</div>
-          <p class="text-[#CCCCCC] text-base leading-relaxed">
-            <strong class="text-white">Understand opportunities before your competitors</strong> — what 95% of the market hasn't tried yet, you already know how to apply
+          <p class="text-[#9BA1AB] text-base sm:text-lg leading-relaxed">
+            <strong class="text-white font-medium">Understand opportunities before your competitors</strong> — what 95% of the market hasn't tried yet, you already know how to apply
           </p>
         </li>
         <li class="flex items-start gap-3">
-          <div class="bullet-icon mt-0.5" aria-hidden="true">&#9679;</div>
-          <p class="text-[#CCCCCC] text-base leading-relaxed">
-            <strong class="text-white">Delegate with control</strong> — assign tasks to AI tools yourself, verify results, stop overpaying for "expertise"
+          <p class="text-[#9BA1AB] text-base sm:text-lg leading-relaxed">
+            <strong class="text-white font-medium">Delegate with control</strong> — assign tasks to AI tools yourself, verify results, stop overpaying for "expertise"
           </p>
         </li>
       </ul>
 
-      <div class="flex flex-col sm:flex-row gap-4 mb-14">
-        <a href="#apply" data-testid="cta-primary" class="btn-primary px-8 py-4 rounded-xl text-base font-bold text-center">
-          Apply Now
-        </a>
-        <a href="https://wa.me/971000000000" target="_blank" rel="noopener"
-           class="btn-outline-white px-8 py-4 rounded-xl text-base font-semibold text-center flex items-center justify-center gap-2">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 1.764.458 3.42 1.26 4.862L0 20l5.294-1.24A9.958 9.958 0 0010 20c5.523 0 10-4.477 10-10S15.523 0 10 0zm-1.5 5.5c-.28 0-.72.1-.972.372C7.276 6.144 6.5 6.9 6.5 8.25c0 1.35 1.034 2.658 1.178 2.842.144.184 2.028 3.096 4.956 4.347.692.3 1.232.478 1.654.611.694.221 1.325.19 1.824.115.556-.083 1.714-.702 1.955-1.38.24-.677.24-1.258.168-1.38-.072-.12-.264-.192-.552-.336s-1.703-.842-1.966-.937c-.264-.096-.456-.144-.648.144-.192.288-.744.936-.912 1.128-.168.192-.336.216-.624.072-.288-.144-1.216-.448-2.316-1.428-.856-.762-1.434-1.703-1.602-1.991-.168-.288-.018-.443.126-.587.13-.13.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.56-.888-2.136C9.27 5.78 9.02 5.5 8.5 5.5z" fill="currentColor"/>
-          </svg>
-          Message on WhatsApp
-        </a>
-      </div>
-
-      <div class="grid grid-cols-3 gap-6 max-w-lg">
-        <div class="text-center" data-testid="metric-participants">
-          <div class="metric-number">47</div>
-          <div class="text-[#CCCCCC] text-sm mt-1">participants</div>
+      <div class="grid grid-cols-3 gap-3 max-w-md mb-10">
+        <div class="card-float-dark card-3d rounded-xl p-4 text-center" data-testid="metric-participants">
+          <div class="metric-number counter text-3xl sm:text-4xl" data-count="41">41</div>
+          <div class="text-[#9BA1AB] font-sans text-xs mt-1">completed</div>
         </div>
-        <div class="text-center" data-testid="metric-group">
-          <div class="metric-number">10</div>
-          <div class="text-[#CCCCCC] text-sm mt-1">max group size</div>
+        <div class="card-float-dark card-3d rounded-xl p-4 text-center" data-testid="metric-group">
+          <div class="metric-number counter text-3xl sm:text-4xl" data-count="10">10</div>
+          <div class="text-[#9BA1AB] font-sans text-xs mt-1">max group</div>
         </div>
-        <div class="text-center" data-testid="metric-days">
-          <div class="metric-number">2</div>
-          <div class="text-[#CCCCCC] text-sm mt-1">days in Dubai</div>
+        <div class="card-float-dark card-3d rounded-xl p-4 text-center" data-testid="metric-days">
+          <div class="metric-number counter text-3xl sm:text-4xl" data-count="2">2</div>
+          <div class="text-[#9BA1AB] font-sans text-xs mt-1">days in Dubai</div>
         </div>
       </div>
-
     </div>
+
   </div>
 </section>
 
 
-<!-- SECTION 2: PAIN -->
-<section data-section="pain" id="pain" class="bg-dark py-20 sm:py-28">
+<!-- SECTION 2: PAIN + BEFORE/AFTER -->
+<section data-section="pain" id="pain" class="bg-dark py-12 sm:py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <hr class="divider-dashed mb-20" />
+
     <div class="mb-14">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">Do you recognise yourself?</h2>
+      <h2 class="slide-h2 slide-h2-dark mb-4">Do you <span class="text-accent">recognise yourself?</span></h2>
     </div>
-    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-20 list-none p-0 m-0">
-      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
-        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
-        <p class="text-[#CCCCCC] text-base leading-relaxed">You pay contractors for AI tasks — and can't tell if the price is fair or you're being overcharged</p>
+
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10 list-none p-0 m-0">
+
+      <li class="glass-card-dark card-3d p-6 flex items-start gap-4">
+        <div class="icon-chip" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.2c-.5-.8-1.4-1.2-2.5-1.2-1.5 0-2.7.8-2.7 2s1.1 1.7 2.7 2c1.6.3 2.7.8 2.7 2s-1.2 2-2.7 2c-1.1 0-2-.4-2.5-1.2M12 6.5V8m0 8v1.5"/></svg></div>
+        <p class="text-[#C8CCD2] text-base leading-relaxed">
+          You pay contractors for AI tasks — and can't tell if the price is fair or you're being overcharged
+        </p>
       </li>
-      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
-        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
-        <p class="text-[#CCCCCC] text-base leading-relaxed">You hear about ChatGPT, automation, AI agents — but have no idea where to start for your business</p>
+
+      <li class="glass-card-dark card-3d p-6 flex items-start gap-4">
+        <div class="icon-chip" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div>
+        <p class="text-[#C8CCD2] text-base leading-relaxed">
+          You hear about ChatGPT, automation, AI agents — but have no idea where to start for your specific business
+        </p>
       </li>
-      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
-        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
-        <p class="text-[#CCCCCC] text-base leading-relaxed">You tried hiring someone to "figure out AI" — got a nice presentation and nothing that actually works</p>
+
+      <li class="glass-card-dark card-3d p-6 flex items-start gap-4">
+        <div class="icon-chip" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 8.5h6M9 12h6M9 15.5h3.5"/></svg></div>
+        <p class="text-[#C8CCD2] text-base leading-relaxed">
+          You tried hiring someone to "figure out AI" — got a nice presentation and nothing that actually works
+        </p>
       </li>
-      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
-        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
-        <p class="text-[#CCCCCC] text-base leading-relaxed">Competitors are implementing something, you see the results, but don't know how they're doing it</p>
+
+      <li class="glass-card-dark card-3d p-6 flex items-start gap-4">
+        <div class="icon-chip" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <p class="text-[#C8CCD2] text-base leading-relaxed">
+          Competitors are implementing something, you see the results, but don't know how they're doing it
+        </p>
       </li>
+
     </ul>
 
-    <h3 class="text-2xl sm:text-3xl font-black text-white mb-8">What changes after two days</h3>
-    <div class="overflow-x-auto rounded-2xl">
-      <table class="before-after-table w-full text-sm">
-        <thead>
-          <tr>
-            <th class="text-left p-4 rounded-tl-2xl w-1/2">Before</th>
-            <th class="th-accent text-left p-4 rounded-tr-2xl w-1/2">After</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="p-4 text-[#CCCCCC] align-top">You pay 1500 AED for a simple bot — wait a week, get something wrong</td>
-            <td class="p-4 text-white align-top">You understand the task from the inside, specify it precisely — pay 3x less and get it faster</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[#CCCCCC] align-top">Want a landing page — go to an agency, pay for development</td>
-            <td class="p-4 text-white align-top">You know how to build a working landing page in one day, and understand what's actually worth paying for</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[#CCCCCC] align-top">Clients in WhatsApp — you handle manually, lose leads</td>
-            <td class="p-4 text-white align-top">Automatic qualification: bot filters out non-target, qualified leads go straight to you</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[#CCCCCC] align-top">Meeting recordings pile up, nobody listens</td>
-            <td class="p-4 text-white align-top">Meeting transcript → tasks in team chat automatically</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[#CCCCCC] align-top rounded-bl-2xl">CRM sits idle, data goes stale</td>
-            <td class="p-4 text-white align-top rounded-br-2xl">AI reminds, congratulates, does follow-up — without a manager</td>
-          </tr>
-        </tbody>
-      </table>
+    <h3 class="slide-h2 slide-h2-dark mb-8" style="font-size:clamp(1.2rem,2.2vw,1.8rem)">What changes: <span class="text-accent">before and after</span></h3>
+
+    <div class="price-compare mb-8">
+      <div class="price-col-before">
+        <div class="price-col-header">You used to pay</div>
+        <div class="price-row">
+          <span>Telegram bot from a contractor</span>
+          <span class="price-old">$3,000–8,000 + 3 weeks</span>
+        </div>
+        <div class="price-row">
+          <span>WhatsApp automation</span>
+          <span class="price-old">$2,000–5,000 or $200/mo SaaS</span>
+        </div>
+        <div class="price-row">
+          <span>Landing page from an agency</span>
+          <span class="price-old">$1,500–5,000 + a week of revisions</span>
+        </div>
+        <div class="price-row">
+          <span>AI agent for business tasks</span>
+          <span class="price-old">$5,000–20,000 — if you find someone who can</span>
+        </div>
+        <div class="price-row">
+          <span>Competitor parser</span>
+          <span class="price-old">$2,000–6,000 dev + maintenance</span>
+        </div>
+      </div>
+      <div class="price-col-after">
+        <div class="price-col-header">After the workshop</div>
+        <div class="price-row">
+          <span>Build it yourself in 1 day</span>
+          <span class="price-new">Change it yourself — no briefs, no extra fees</span>
+        </div>
+        <div class="price-row">
+          <span>Your own infrastructure</span>
+          <span class="price-new">No quotas, no monthly SaaS payments</span>
+        </div>
+        <div class="price-row">
+          <span>Done in an evening</span>
+          <span class="price-new">You know what's fair when you delegate</span>
+        </div>
+        <div class="price-row">
+          <span>Build it yourself for your task</span>
+          <span class="price-new">In 2 days — hands-on, with a ready result</span>
+        </div>
+        <div class="price-row">
+          <span>A few hours to assemble</span>
+          <span class="price-new">For your specific request, no contractor needed</span>
+        </div>
+      </div>
     </div>
+
+    <div class="iso-viz-wrap mb-4 hidden lg:block">
+      <div class="iso-viz">
+
+        <div class="iso-card card-3d" style="max-width:260px;margin:0 auto 0 30%">
+          <div class="iso-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+          <div><div class="iso-card-text">ANALYSIS</div><div class="iso-card-lines"><div class="iso-card-line"></div><div class="iso-card-line"></div></div></div>
+        </div>
+
+        <div class="iso-connector"></div>
+
+        <div class="iso-card card-3d" style="max-width:300px;margin:0 auto;background:linear-gradient(135deg,rgba(232,114,42,0.18) 0%,rgba(232,114,42,0.05) 100%);border-color:rgba(232,114,42,0.4)">
+          <div class="iso-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+          <div><div class="iso-card-text">PROCESS IDENTIFIED</div><div class="iso-card-lines"><div class="iso-card-line"></div><div class="iso-card-line"></div></div></div>
+        </div>
+
+        <div class="iso-connector"></div>
+
+        <div class="grid grid-cols-2 gap-4" style="max-width:560px;margin:0 auto">
+          <div class="iso-card card-3d">
+            <div class="iso-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div><div class="iso-card-text">TOOLS</div><div class="iso-card-lines"><div class="iso-card-line"></div><div class="iso-card-line"></div></div></div>
+          </div>
+          <div class="iso-card card-3d">
+            <div class="iso-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div><div class="iso-card-text">AUTOMATION</div><div class="iso-card-lines"><div class="iso-card-line"></div><div class="iso-card-line"></div></div></div>
+          </div>
+        </div>
+
+        <div class="iso-connector"></div>
+
+        <div class="grid grid-cols-2 gap-4" style="max-width:560px;margin:0 auto">
+          <div class="iso-card card-3d" style="background:linear-gradient(135deg,rgba(255,255,255,0.07) 0%,rgba(232,114,42,0.06) 100%)">
+            <div class="iso-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+            <div><div class="iso-card-text">RESULT</div><div class="iso-card-lines"><div class="iso-card-line"></div><div class="iso-card-line"></div></div></div>
+          </div>
+          <a href="#apply" class="btn-primary iso-cta-pulse rounded-xl flex items-center justify-center gap-2 text-sm font-bold" style="min-height:56px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Apply Now
+          </a>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
 
 <!-- SECTION 3: AUDIENCE -->
-<section data-section="audience" id="audience" class="bg-light py-20 sm:py-28">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="mb-14">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] mb-3">Who this workshop is for</h2>
-      <p class="text-[#555555] text-lg">The workshop is for you if:</p>
+<section data-section="audience" id="audience" class="slide-light relative overflow-hidden py-12 sm:py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <div class="grid grid-cols-1 lg:grid-cols-[44%_1fr] gap-12 lg:gap-16 items-start mb-10">
+
+      <div class="pt-2">
+        <h2 class="slide-h2 mb-9">Who is this <span class="text-accent">workshop for?</span></h2>
+
+        <p class="text-[#5A5F68] text-lg leading-relaxed max-w-md">
+          Everyone talks about AI,
+          but in your company <span class="text-accent">nobody has tried it with their own hands</span>.
+        </p>
+
+        <hr class="dotted-sep" />
+
+        <p class="font-display text-[#15171C] font-semibold text-xl leading-snug">
+          Not lectures.<br />
+          <span class="text-accent">Two days — your mind,<br />your tasks, your AI agent.</span>
+        </p>
+      </div>
+
+      <ul data-testid="fits-list" class="glass-cascade list-none p-0 m-0">
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            You're a business owner or manager — and your work has routine that can be handed off to tools
+          </p>
+        </li>
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            You're not technical and don't want to become technical — you want to understand AI just enough to manage it, not depend on those who "know how"
+          </p>
+        </li>
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            You're tired of paying contractors for tasks you can't evaluate
+          </p>
+        </li>
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            You have a specific task — lead qualification, database work, communication automation — and want to solve it under guidance
+          </p>
+        </li>
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            Practice matters more than theory: you come to work, not to listen to lectures
+          </p>
+        </li>
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            You're willing to invest 2 days to save months of trial and error
+          </p>
+        </li>
+
+      </ul>
     </div>
-    <ul data-testid="fits-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16 list-none p-0 m-0">
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">You're a business owner or manager — and your work has routine that can be handed off to tools</p>
-      </li>
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">You're not technical and don't want to become technical — you want to understand AI just enough to manage it</p>
-      </li>
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">You're tired of paying contractors for tasks you can't evaluate</p>
-      </li>
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">You have a specific task — lead qualification, database work, communication automation — and want to solve it under guidance</p>
-      </li>
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">Practice matters more than theory: you come to work, not to listen to lectures</p>
-      </li>
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">You're willing to invest 2 days to save months of trial and error</p>
-      </li>
-    </ul>
+
     <div class="bg-[#111111] rounded-2xl p-8 border border-[#333333]">
       <h3 class="text-xl font-bold text-white mb-6">This workshop is NOT for you if...</h3>
       <ul data-testid="not-fits-list" class="flex flex-col gap-5 list-none p-0 m-0">
+
         <li class="flex items-start gap-4">
           <div class="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 2L8 8M8 2L2 8" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2 2L8 8M8 2L2 8" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
           </div>
-          <p class="text-[#CCCCCC] text-base leading-relaxed">You don't have a specific task or project yet — the entire second day is built around your real task. Without it, Day 2 loses its purpose</p>
+          <p class="text-[#CCCCCC] text-base leading-relaxed">
+            You don't have a specific task or project yet — the entire second day is built around your real task. Without it, Day 2 loses its purpose
+          </p>
         </li>
+
         <li class="flex items-start gap-4">
           <div class="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 2L8 8M8 2L2 8" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2 2L8 8M8 2L2 8" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
           </div>
-          <p class="text-[#CCCCCC] text-base leading-relaxed">You're not ready to spend 12 hours learning a new tool — there's no passive listening here, you work with your hands and your head both days</p>
+          <p class="text-[#CCCCCC] text-base leading-relaxed">
+            You're not ready to spend 12 hours learning a new tool — there's no passive listening here, you work with your hands and your head both days
+          </p>
         </li>
+
         <li class="flex items-start gap-4">
           <div class="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 2L8 8M8 2L2 8" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2 2L8 8M8 2L2 8" stroke="#999999" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
           </div>
-          <p class="text-[#CCCCCC] text-base leading-relaxed">You're convinced AI is not for you — please don't come. We won't argue and won't take your money. The workshop only works with those who are open to new things</p>
+          <p class="text-[#CCCCCC] text-base leading-relaxed">
+            You're convinced AI is not for you — please don't come. We won't argue and won't take your money. The workshop only works with those who are open to new things
+          </p>
         </li>
+
       </ul>
     </div>
+
   </div>
 </section>
 
 
-<!-- SECTION 4: PROJECTS -->
-<section data-section="projects" id="projects" class="bg-light py-20 sm:py-28">
+<!-- SECTION 4: 8 TASKS -->
+<section data-section="projects" id="projects" class="bg-light py-12 sm:py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <hr class="divider-dashed-light mb-20" />
+
     <div class="mb-6">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] mb-4">8 tasks covered at the workshop</h2>
+      <h2 class="font-display font-light text-[#111111] mb-4" style="font-size:clamp(1.8rem,3.8vw,3.4rem);letter-spacing:-0.01em;text-transform:uppercase">8 tasks covered at the workshop</h2>
       <p class="text-[#555555] text-base sm:text-lg leading-relaxed max-w-3xl">
-        Each participant chooses their own task. Artashes helps you understand it, design the architecture, and launch it. The list is a menu — you take what your business needs.
+        Each participant chooses their own task. Artashes helps you understand it, design the architecture, and launch it.
+        The list is not a fixed agenda — it's a menu: you take what your business needs.
       </p>
     </div>
+
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-12">
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">A</div>
+
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="10" r="1.5" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1.5" fill="currentColor" stroke="none"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Quiz Bot for Client Qualification</h3>
-        <p class="text-[#555555] text-sm leading-relaxed">Client arrives — bot asks questions, qualifies, passes only targeted leads to you. Save manager time, don't lose leads.</p>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Client arrives — bot asks questions, qualifies, passes only targeted leads to you. Save manager time, don't lose leads.
+        </p>
       </div>
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">B</div>
+
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8M12 17v4"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Landing Page — Understanding How It Works</h3>
-        <p class="text-[#555555] text-sm leading-relaxed">Not "make a landing page", but understand what's behind it, what it actually costs, where contractors overcharge. Plus — build a working site in one day.</p>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Not "make a landing page", but understand what's behind it, what it actually costs, where contractors overcharge. Plus — build a working site in one day.
+        </p>
       </div>
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">C</div>
+
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-1.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">WhatsApp Automation</h3>
-        <p class="text-[#555555] text-sm leading-relaxed">Broadcast to database → automatic qualification of responses. Interested leads enter the funnel. Others don't take up team time.</p>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Broadcast to database → automatic qualification of responses. Interested leads enter the funnel. Others don't take up team time.
+        </p>
       </div>
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">D</div>
+
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v3m0 3v.5"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Chat and Channel Parser</h3>
-        <p class="text-[#555555] text-sm leading-relaxed">Monitor competitors, industry channels, mentions. AI collects and structures — you get a digest, not a flood of raw data.</p>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Monitor competitors, industry channels, mentions. AI collects and structures — you get a digest, not a flood of raw data.
+        </p>
       </div>
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">E</div>
+
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Meetings → Tasks</h3>
-        <p class="text-[#555555] text-sm leading-relaxed">Meeting recording (Zoom, Google Meet) → transcript → Claude extracts tasks → automatically sent to team chat. Meetings no longer get lost.</p>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Meeting recording (Zoom, Google Meet) → transcript → Claude extracts tasks → automatically sent to team chat. Meetings no longer get lost.
+        </p>
       </div>
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">F</div>
+
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h.01M11 8h6M7 12h4M13 12h4"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">CRM Agent</h3>
-        <p class="text-[#555555] text-sm leading-relaxed">Automatic congratulations, post-meeting follow-ups, renewal reminders. AI works with your database — you never forget clients who are "almost ready".</p>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Automatic congratulations, post-meeting follow-ups, renewal reminders. AI works with your database — you never forget clients who are "almost ready".
+        </p>
       </div>
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">G</div>
+
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Auto-responder for DMs and Comments</h3>
-        <p class="text-[#555555] text-sm leading-relaxed">AI answers typical questions in Instagram, Telegram, handles objections, passes hot leads to the manager. Without robotic bots that irritate everyone.</p>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          AI answers typical questions in Instagram, Telegram, handles objections, passes hot leads to the manager. Without robotic bots that irritate everyone.
+        </p>
       </div>
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">H</div>
+
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Website Parser</h3>
-        <p class="text-[#555555] text-sm leading-relaxed">Monitor competitor prices, analyze market offers. You know what's happening — before others notice.</p>
+        <p class="text-[#555555] text-sm leading-relaxed">
+          Monitor competitor prices, analyze market offers. You know what's happening — before others notice.
+        </p>
       </div>
+
     </div>
+
   </div>
 </section>
 
 
 <!-- SECTION 5: PROGRAM -->
-<section data-section="program" id="program" class="bg-light py-20 sm:py-28">
+<section data-section="program" id="program" class="bg-light py-12 sm:py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <hr class="divider-dashed-light mb-20" />
+
     <div class="mb-4">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] mb-3">What happens over 2 days</h2>
-      <p class="text-[#555555] text-base sm:text-lg max-w-2xl">No presentations for the sake of it. Artashes works alongside you, answering questions as you go — not after.</p>
+      <h2 class="font-display font-light text-[#111111] mb-3" style="font-size:clamp(1.8rem,3.8vw,3.4rem);letter-spacing:-0.01em;text-transform:uppercase">What happens over 2 days</h2>
+      <p class="text-[#555555] text-base sm:text-lg max-w-2xl">
+        No presentations for the sake of it. Artashes works alongside you, answering questions as you go — not after.
+      </p>
     </div>
+
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-      <div class="card-float-light rounded-2xl p-8">
-        <div class="flex items-center gap-3 mb-8">
+
+      <div class="card-float-light card-3d rounded-2xl p-8">
+        <div class="flex items-center gap-3 mb-2">
           <div class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Day 1</div>
-          <h3 class="text-[#111111] font-black text-xl">Stop Being Afraid</h3>
+          <h3 class="text-[#111111] font-black text-xl">Do, Don't Watch</h3>
         </div>
+        <p class="text-[#555555] text-sm leading-relaxed mb-8">
+          Artashes gets you to results. 90% of those who started independently quit, never seeing the full picture. Here you can't drop out — because he walks you to the end.
+        </p>
+
         <div class="flex flex-col gap-0">
-          <div class="flex gap-4"><div class="flex flex-col items-center"><div class="timeline-dot"></div><div class="timeline-line flex-1 mt-1" style="height:60px"></div></div><div class="pb-6"><div class="text-accent text-xs font-bold mb-1">10:00</div><div class="text-[#111111] font-semibold text-sm mb-1">Prompting as a Skill</div><p class="text-[#555555] text-sm leading-relaxed">Live exercise from minute one. You learn to give AI tasks that produce the result you need — it's a skill, not magic.</p></div></div>
-          <div class="flex gap-4"><div class="flex flex-col items-center"><div class="timeline-dot"></div><div class="timeline-line flex-1 mt-1" style="height:60px"></div></div><div class="pb-6"><div class="text-accent text-xs font-bold mb-1">11:30</div><div class="text-[#111111] font-semibold text-sm mb-1">Personal Business Card Site in 40 Minutes</div><p class="text-[#555555] text-sm leading-relaxed">The barrier "this isn't for me, I'm not technical" falls right here. Not because someone explained it — because you did it yourself.</p></div></div>
-          <div class="flex gap-4"><div class="flex flex-col items-center"><div class="timeline-dot"></div><div class="timeline-line flex-1 mt-1" style="height:60px"></div></div><div class="pb-6"><div class="text-accent text-xs font-bold mb-1">14:00</div><div class="text-[#111111] font-semibold text-sm mb-1">Your Own Infrastructure</div><p class="text-[#555555] text-sm leading-relaxed">VPS, Claude Code, Telegram bot. You understand what they are and why — at user level, not developer level.</p></div></div>
-          <div class="flex gap-4"><div class="flex flex-col items-center"><div class="timeline-dot"></div></div><div class="pb-4"><div class="text-accent text-xs font-bold mb-1">16:00</div><div class="text-[#111111] font-semibold text-sm mb-1">Voice Input with Whisperflow</div><p class="text-[#555555] text-sm leading-relaxed">Dictate by voice → get structured text, tasks, emails. A tool that changes your daily work from day one.</p></div></div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Breakdown: what's actually worth automating in your business</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Artashes looks at tasks specifically — where the bottleneck is, what AI closes in hours, not weeks.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Your own infrastructure</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Set up a VPS (remote server), connect Claude Code, install a Telegram bot. For the first time in your life — yours, not someone else's.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">First task with your own hands</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">You build something simple — a business card site or a bot. Not because someone explained it, but because you did it yourself.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="pb-4">
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Voice Input with Whisperflow</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Dictate by voice → get structured text, tasks, emails. Work speed changes from day one.</p>
+            </div>
+          </div>
+
         </div>
+
         <div class="mt-6 bg-accent/10 border border-accent/25 rounded-xl p-4">
-          <p class="text-accent font-semibold text-sm leading-relaxed">&#x2713; Day 1 result: you've made something with your hands, you have a new understanding of what's possible — and a specific task for Day 2.</p>
+          <p class="text-accent font-semibold text-sm leading-relaxed">
+            &#x2713; Day 1 result: you've made something with your hands, you have a new understanding of what's possible — and a specific task for Day 2.
+          </p>
         </div>
       </div>
-      <div class="card-float-light rounded-2xl p-8">
+
+      <div class="card-float-light card-3d rounded-2xl p-8">
         <div class="flex items-center gap-3 mb-8">
           <div class="bg-[#111111] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Day 2</div>
           <h3 class="text-[#111111] font-black text-xl">Your Project</h3>
         </div>
+
         <div class="flex flex-col gap-0">
-          <div class="flex gap-4"><div class="flex flex-col items-center"><div class="timeline-dot"></div><div class="timeline-line flex-1 mt-1" style="height:60px"></div></div><div class="pb-6"><div class="text-accent text-xs font-bold mb-1">10:00</div><div class="text-[#111111] font-semibold text-sm mb-1">Individual Review of Your Task</div><p class="text-[#555555] text-sm leading-relaxed">Artashes looks at your specific business: where the bottleneck is, what's really worth automating, what's not worth touching.</p></div></div>
-          <div class="flex gap-4"><div class="flex flex-col items-center"><div class="timeline-dot"></div><div class="timeline-line flex-1 mt-1" style="height:60px"></div></div><div class="pb-6"><div class="text-accent text-xs font-bold mb-1">11:30</div><div class="text-[#111111] font-semibold text-sm mb-1">Architecture for Your Business</div><p class="text-[#555555] text-sm leading-relaxed">Not a template, but logic: how the tool is structured, what parts you specifically need, what can be simplified.</p></div></div>
-          <div class="flex gap-4"><div class="flex flex-col items-center"><div class="timeline-dot"></div><div class="timeline-line flex-1 mt-1" style="height:60px"></div></div><div class="pb-6"><div class="text-accent text-xs font-bold mb-1">13:30</div><div class="text-[#111111] font-semibold text-sm mb-1">Building Together</div><p class="text-[#555555] text-sm leading-relaxed">You work with your hands. Artashes is nearby — guiding, explaining when you're stuck. Not doing it for you.</p></div></div>
-          <div class="flex gap-4"><div class="flex flex-col items-center"><div class="timeline-dot"></div></div><div class="pb-4"><div class="text-accent text-xs font-bold mb-1">16:30</div><div class="text-[#111111] font-semibold text-sm mb-1">Launch and Next Steps Plan</div><p class="text-[#555555] text-sm leading-relaxed">The project launches. You discuss what's next: how to scale, who to hand it to, how to monitor it.</p></div></div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Individual review of your task</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Artashes looks at your specific business: where the bottleneck is, what's really worth automating, what's not worth touching.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Architecture for your business</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Not a template, but logic: how the tool is structured, what parts you specifically need, what can be simplified.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
+            </div>
+            <div class="pb-6">
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Building together</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">You work with your hands. Artashes is nearby — guiding, explaining when you're stuck. Not doing it for you.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="pb-4">
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Launch and next steps plan</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">The project launches. You discuss what's next: how to scale, who to hand it to, how to monitor it.</p>
+            </div>
+          </div>
+
         </div>
+
         <div class="mt-6 bg-accent/10 border border-accent/25 rounded-xl p-4">
-          <p class="text-accent font-semibold text-sm leading-relaxed">&#x2713; Day 2 result: understanding of how to build AI tools for your tasks. 96% of participants leave Day 2 with a ready solution for their task.</p>
+          <p class="text-accent font-semibold text-sm leading-relaxed">
+            &#x2713; Day 2 result: understanding of how to build AI tools for your tasks. 96% of participants leave Day 2 with a ready solution for their task.
+          </p>
         </div>
       </div>
+
     </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 5b: RESULTS -->
+<section data-section="results" id="results" class="bg-dark py-12 sm:py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="label-tag mb-6">What you take with you</div>
+    <h2 class="slide-h2 slide-h2-dark mb-3">Results that <span class="text-accent">stay with you</span></h2>
+    <p class="text-[#9BA1AB] text-base sm:text-lg max-w-2xl leading-relaxed mb-14">
+      Not "knowledge" and not "insights". Four concrete things that keep working after you return home.
+    </p>
+
+    <div class="results-grid">
+
+      <div class="result-card card-3d">
+        <div class="result-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base mb-2">Your own AI agent</h3>
+          <p class="text-[#9BA1AB] text-[15px] leading-relaxed">Built for your specific task: parser, WhatsApp assistant, application processor, analytics. You take it home working.</p>
+        </div>
+      </div>
+
+      <div class="result-card card-3d">
+        <div class="result-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            <path d="M7 8h5M7 11h3"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base mb-2">Personal VPS infrastructure</h3>
+          <p class="text-[#9BA1AB] text-[15px] leading-relaxed">Server, Telegram bot, voice input, Claude Code. Built from scratch right at the table — you expand it independently from there.</p>
+        </div>
+      </div>
+
+      <div class="result-card card-3d">
+        <div class="result-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base mb-2">Voice instead of keyboard</h3>
+          <p class="text-[#9BA1AB] text-[15px] leading-relaxed">Whisperflow is set up and working. From the moment you start speaking to AI instead of typing — your work speed changes dramatically.</p>
+        </div>
+      </div>
+
+      <div class="result-card card-3d">
+        <div class="result-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base mb-2">A different mindset</h3>
+          <p class="text-[#9BA1AB] text-[15px] leading-relaxed">The main thing. You stop seeing AI as foreign territory and start seeing every task as a place where you can plug it in.</p>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
 
 <!-- SECTION 6: SPEAKER -->
-<section data-section="speaker" id="speaker" class="bg-dark py-20 sm:py-28">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <hr class="divider-dashed mb-20" />
-    <div class="mb-12">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-2">Artashes Grigoryan</h2>
-      <p class="text-accent font-semibold text-lg">workshop facilitator</p>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<section data-section="speaker" id="speaker" class="aurora-bg relative overflow-hidden py-12 sm:py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <div class="label-tag mb-6">Workshop facilitator</div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+
+      <div class="flex justify-center lg:justify-start">
+        <div class="speaker-photo-wrap float-anim">
+          <img src="../assets/img/artashes.webp" alt="Artashes Grigoryan — AI Workshop facilitator" />
+          <div class="speaker-photo-glow"></div>
+        </div>
+      </div>
+
       <div>
-        <p class="text-[#CCCCCC] text-base leading-relaxed mb-6">Artashes is not a consultant who talks about AI based on other people's cases.</p>
-        <p class="text-[#CCCCCC] text-base leading-relaxed mb-8">He's a top-5 broker at Whitewheel in Dubai — building AI systems for his own businesses because it provides real competitive advantage. Not because it's trendy.</p>
-        <div class="flex flex-col gap-4 mb-8">
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-tight mb-2" style="text-transform:uppercase;letter-spacing:-0.01em">
+          Artashes Grigoryan
+        </h2>
+        <p class="text-accent font-sans font-semibold text-base tracking-wide mb-8">top-5 broker Whitewheel · Dubai</p>
+
+        <p class="text-text-secondary-dark font-sans text-base leading-relaxed mb-5">
+          Artashes is not a consultant who talks about AI based on other people's cases.
+        </p>
+        <p class="text-text-secondary-dark font-sans text-base leading-relaxed mb-8">
+          He builds AI systems for his own businesses because it gives a real competitive advantage. Not because it's trendy.
+        </p>
+
+        <div class="flex flex-col gap-3 mb-8">
           <div class="card-float-dark rounded-xl p-5 accent-bar">
-            <div class="font-bold text-white mb-1">brochurefinderbot.com</div>
-            <p class="text-[#CCCCCC] text-sm leading-relaxed">AI bot for finding real estate brochures. <strong class="text-white">6500+ active users.</strong> Runs without managers.</p>
+            <div class="font-sans font-semibold text-white mb-1 text-sm">brochurefinderbot.com</div>
+            <p class="text-text-secondary-dark font-sans text-sm leading-relaxed">
+              AI bot for finding real estate brochures. <strong class="text-white">6500+ active users.</strong> Runs without managers.
+            </p>
           </div>
           <div class="card-float-dark rounded-xl p-5 accent-bar">
-            <div class="font-bold text-white mb-1">distressfinder.com</div>
-            <p class="text-[#CCCCCC] text-sm leading-relaxed">AI aggregator for analyzing discounted deals in the Dubai market. A tool that saves hours of manual searching.</p>
+            <div class="font-sans font-semibold text-white mb-1 text-sm">distressfinder.com</div>
+            <p class="text-text-secondary-dark font-sans text-sm leading-relaxed">
+              AI aggregator for analyzing discounted deals in the Dubai market. Saves hours of manual searching.
+            </p>
           </div>
         </div>
-        <p class="text-[#CCCCCC] text-base leading-relaxed mb-6">47 participants have completed the workshop. <strong class="text-white">45 out of 47 — successfully.</strong></p>
-        <p class="text-[#CCCCCC] text-base leading-relaxed">There are no presentations at the workshop. Artashes works alongside you, sees your task and answers questions as you go — not from a script. If he doesn't know the answer — he'll say so directly.</p>
-      </div>
-      <div>
-        <blockquote class="blockquote-styled card-float-dark rounded-2xl p-8 pl-10">
-          <p class="text-white text-xl sm:text-2xl font-semibold leading-relaxed italic mt-6">
+
+        <blockquote class="blockquote-styled card-float-dark rounded-xl p-6 pl-8 mb-8">
+          <p class="testimonial-quote mt-4">
             "No promises of results: you'll do what you want, under my guidance"
           </p>
-          <footer class="mt-6">
-            <div class="text-accent font-bold">Artashes Grigoryan</div>
-            <div class="text-[#CCCCCC] text-sm mt-1">top-5 broker Whitewheel · Dubai</div>
-          </footer>
         </blockquote>
-        <div class="grid grid-cols-3 gap-4 mt-8">
-          <div class="card-float-dark rounded-xl p-4 text-center">
-            <div class="text-2xl sm:text-3xl font-black text-accent">47</div>
-            <div class="text-[#CCCCCC] text-xs mt-1">participants</div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <div class="card-float-dark card-3d rounded-xl p-4 text-center">
+            <div class="metric-number counter text-xl sm:text-2xl" data-count="41">41</div>
+            <div class="text-text-secondary-dark font-sans text-xs mt-1">workshop participants</div>
           </div>
-          <div class="card-float-dark rounded-xl p-4 text-center">
-            <div class="text-2xl sm:text-3xl font-black text-accent">6500+</div>
-            <div class="text-[#CCCCCC] text-xs mt-1">bot users</div>
+          <div class="card-float-dark card-3d rounded-xl p-4 text-center">
+            <div class="metric-number counter text-xl sm:text-2xl" data-count="96">96%</div>
+            <div class="text-text-secondary-dark font-sans text-xs mt-1">got results</div>
           </div>
-          <div class="card-float-dark rounded-xl p-4 text-center">
-            <div class="text-2xl sm:text-3xl font-black text-accent">96%</div>
-            <div class="text-[#CCCCCC] text-xs mt-1">success rate</div>
+          <div class="card-float-dark card-3d rounded-xl p-4 text-center">
+            <div class="metric-number counter text-lg sm:text-xl" data-count="6500">6500+</div>
+            <div class="text-text-secondary-dark font-sans text-xs mt-1">brochurefinderbot.com users</div>
           </div>
         </div>
       </div>
+
     </div>
+
   </div>
 </section>
 
 
 <!-- SECTION 7: TESTIMONIALS -->
-<section data-section="testimonials" id="testimonials" class="bg-light py-20 sm:py-28">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<section data-section="testimonials" id="testimonials" class="aurora-bg relative overflow-hidden py-12 sm:py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
     <div class="mb-4">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] mb-3">What participants say</h2>
-      <p class="text-[#555555] text-base sm:text-lg">
-        45 out of 47 participants successfully completed the workshop. <strong class="text-[#111111]">96%</strong> leave with a ready solution for their task. First participants: top realtors and agency owners in Dubai.
+      <div class="label-tag mb-4">Participant reviews</div>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-white mb-4" style="text-transform:uppercase;letter-spacing:-0.01em">What participants say</h2>
+      <p class="text-text-secondary-dark font-sans text-base sm:text-lg max-w-2xl leading-relaxed">
+        Videos recorded at the exit right after Day 2. Quotes from participant messages on the evening of Day 1 and after Day 2. No preparation, no editing.
       </p>
     </div>
-    <div class="flex justify-center mt-12 mb-10">
-      <div style="width:100%;max-width:324px;border-radius:16px;overflow:hidden;border:1px solid rgba(232,114,42,0.3);box-shadow:0 0 40px rgba(232,114,42,0.08),0 20px 48px rgba(0,0,0,0.15)">
-        <video controls preload="metadata" style="width:100%;display:block;background:#0D0F14" src="../assets/video.mp4"></video>
-        <div style="padding:14px 18px;background:rgba(240,240,240,0.95);border-top:1px solid rgba(0,0,0,0.06)">
-          <p style="margin:0;font-size:13px;color:#666;line-height:1.5">Video recorded right after Day 2. Unscripted, unedited.</p>
+
+    <div class="mt-12 mb-8 flex justify-center">
+      <div style="width:100%;max-width:324px;border-radius:16px;overflow:hidden;border:1px solid rgba(232,114,42,0.3);box-shadow:0 0 40px rgba(232,114,42,0.08),0 20px 48px rgba(0,0,0,0.5)">
+        <video
+          controls
+          preload="metadata"
+          style="width:100%;display:block;background:#0D0F14"
+          src="../assets/video.mp4"
+        ></video>
+        <div style="padding:14px 18px;background:rgba(13,15,20,0.95);border-top:1px solid rgba(255,255,255,0.06)">
+          <p style="margin:0;font-family:var(--f-sans);font-size:13px;color:#9BA1AB;line-height:1.5">Recorded at the exit after Day 2. No preparation, no editing.</p>
         </div>
       </div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      <div data-testid="testimonial-item" class="card-float-light rounded-2xl p-7 flex flex-col">
-        <span class="quote-mark">"</span>
-        <blockquote class="text-[#111111] text-lg font-semibold leading-snug mb-4 flex-1">Today my world turned 180 degrees</blockquote>
-        <footer class="text-[#555555] text-sm border-t border-[#e0e0e0] pt-4 mt-auto">Participant with MBA, 10+ years managing businesses. Evening of Day 1.</footer>
+
+    <div class="max-w-3xl mx-auto flex flex-col gap-14">
+
+      <div data-testid="testimonial-item">
+        <p class="testimonial-quote mb-5">
+          "Today my world turned 180 degrees. It's been 10 years since I finished my MBA managing companies with 10+ billion in turnover — and those were serious case studies. But today — this is the discovery of a new Universe for every direction of business."
+        </p>
+        <div class="text-text-secondary-dark font-sans text-sm">— participant, MBA, 10+ years managing businesses</div>
       </div>
-      <div data-testid="testimonial-item" class="card-float-light rounded-2xl p-7 flex flex-col">
-        <span class="quote-mark">"</span>
-        <blockquote class="text-[#111111] text-lg font-semibold leading-snug mb-4 flex-1">In 40 years I haven't attended a single training. I decided to come to yours — didn't regret it</blockquote>
-        <footer class="text-[#555555] text-sm border-t border-[#e0e0e0] pt-4 mt-auto">Entrepreneur, Dubai.</footer>
+
+      <div data-testid="testimonial-item">
+        <p class="testimonial-quote mb-5">
+          "In 40 years I haven't attended a single training. I decided to come to yours — didn't regret it. Genuinely one of the best training experiences on the UAE market today."
+        </p>
+        <div class="text-text-secondary-dark font-sans text-sm">— participant, entrepreneur, Dubai</div>
       </div>
-      <div data-testid="testimonial-item" class="card-float-light rounded-2xl p-7 flex flex-col">
-        <span class="quote-mark">"</span>
-        <blockquote class="text-[#111111] text-lg font-semibold leading-snug mb-4 flex-1">I expanded my consciousness in both the literal and figurative sense</blockquote>
-        <footer class="text-[#555555] text-sm border-t border-[#e0e0e0] pt-4 mt-auto">Participant. Evening after Day 1.</footer>
+
+      <div data-testid="testimonial-item">
+        <p class="testimonial-quote mb-5">
+          "Today I didn't just learn to work with AI — I expanded my consciousness. In both the literal and figurative sense."
+        </p>
+        <div class="text-text-secondary-dark font-sans text-sm">— participant, evening after Day 1</div>
       </div>
-      <div data-testid="testimonial-item" class="card-float-light rounded-2xl p-7 flex flex-col">
-        <span class="quote-mark">"</span>
-        <blockquote class="text-[#111111] text-lg font-semibold leading-snug mb-4 flex-1">After the training my brain explodes. Idea after idea keeps coming</blockquote>
-        <footer class="text-[#555555] text-sm border-t border-[#e0e0e0] pt-4 mt-auto">Participant. Day after Day 2.</footer>
+
+      <div data-testid="testimonial-item">
+        <p class="testimonial-quote mb-5">
+          "After the training my brain explodes. Idea after idea keeps coming, I'm simplifying my work incredibly — already ready to apply and get to work."
+        </p>
+        <div class="text-text-secondary-dark font-sans text-sm">— participant, after Day 2</div>
       </div>
+
+      <div class="card-float-dark card-3d rounded-2xl p-6 text-center">
+        <div class="metric-number counter mb-2" data-count="96">96%</div>
+        <p class="font-sans font-light text-[#9BA1AB] text-base leading-relaxed">
+          of participants leave Day 2 with a ready solution for their task.<br />
+          <span class="text-white font-medium">41 graduates. First participants: top realtors and agency owners in Dubai.</span>
+        </p>
+      </div>
+
     </div>
+
   </div>
 </section>
 
 
 <!-- SECTION 8: OFFER -->
-<section data-section="offer" id="offer" class="bg-dark py-20 sm:py-28">
+<section data-section="offer" id="offer" class="bg-dark py-12 sm:py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <hr class="divider-dashed mb-20" />
+
     <div class="mb-12">
       <div class="inline-flex items-baseline gap-3 mb-3">
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-accent">2000 AED</h2>
-        <span class="text-white text-2xl font-bold">— what's included</span>
+        <h2 class="font-display font-light text-accent" style="font-size:clamp(2.8rem,6vw,5rem);letter-spacing:-0.02em">2000 AED</h2>
+        <span class="font-display font-light text-white" style="font-size:clamp(1.2rem,2.5vw,1.8rem)">— what's included</span>
       </div>
     </div>
+
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
       <div>
         <h3 class="text-white font-bold text-lg mb-5">Included in the price</h3>
         <div class="flex flex-col gap-3 mb-10">
-          <div class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5"><svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="text-[#CCCCCC] text-base leading-relaxed">2 full days of practice with Artashes (10:00–18:00)</p></div>
-          <div class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5"><svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="text-[#CCCCCC] text-base leading-relaxed">Maximum 10 people per group — Artashes has time to work through each person's task</p></div>
-          <div class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5"><svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="text-[#CCCCCC] text-base leading-relaxed">Individual review of your business and task on Day 2</p></div>
-          <div class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5"><svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="text-[#CCCCCC] text-base leading-relaxed">Access to materials and instructions after the workshop</p></div>
-          <div class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5"><svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="text-[#CCCCCC] text-base leading-relaxed">Group chat — you can ask questions afterwards</p></div>
+
+          <div class="offer-check card-3d">
+            <div class="offer-check-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+            </div>
+            <div class="offer-check-text">
+              <strong>2 full days of practice with Artashes</strong>
+              <span>10:00–18:00, both days — in person, not recorded, not online</span>
+            </div>
+          </div>
+
+          <div class="offer-check card-3d">
+            <div class="offer-check-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="offer-check-text">
+              <strong>Group of up to 10 people</strong>
+              <span>Each person gets individual time with Artashes — not in a stream, but for their task</span>
+            </div>
+          </div>
+
+          <div class="offer-check card-3d">
+            <div class="offer-check-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div class="offer-check-text">
+              <strong>Result guarantee</strong>
+              <span>AI agent works by the end of Day 2 — or we refund</span>
+            </div>
+          </div>
+
+          <div class="offer-check card-3d">
+            <div class="offer-check-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M7 7h.01M11 7h6M7 11h4M13 11h4"/></svg>
+            </div>
+            <div class="offer-check-text">
+              <strong>VPS + Claude Max — set up right at the table</strong>
+              <span>You leave with working infrastructure, not an "instruction to set up at home"</span>
+            </div>
+          </div>
+
+          <div class="offer-check card-3d">
+            <div class="offer-check-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div class="offer-check-text">
+              <strong>Private chat and materials</strong>
+              <span>Support after the workshop — questions, updates, new cases</span>
+            </div>
+          </div>
+
         </div>
+
         <h3 class="text-white font-bold text-lg mb-3">Additional expenses</h3>
-        <p class="text-[#CCCCCC] text-sm mb-4">These are not included — plan ahead:</p>
-        <div class="flex flex-col gap-3">
-          <div class="card-float-dark rounded-xl p-4"><div class="text-white font-semibold text-sm mb-1">Claude Max</div><p class="text-[#CCCCCC] text-sm leading-relaxed">AI subscription — around <strong class="text-white">500 AED/month</strong>. Used during and after the workshop. Cancel anytime.</p></div>
-          <div class="card-float-dark rounded-xl p-4"><div class="text-white font-semibold text-sm mb-1">VPS</div><p class="text-[#CCCCCC] text-sm leading-relaxed">Virtual server — from <strong class="text-white">50 AED/month</strong>. Needed to run tools.</p></div>
-        </div>
-      </div>
-      <div>
-        <h3 class="text-white font-bold text-lg mb-5">Practical info</h3>
-        <div class="card-float-dark rounded-2xl p-6 mb-8">
-          <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-3"><span class="text-accent text-lg">&#128344;</span><div><div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">Time</div><div class="text-white font-semibold text-sm">10:00–18:00, both days</div></div></div>
-            <div class="flex items-center gap-3"><span class="text-accent text-lg">&#128205;</span><div><div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">Location</div><div class="text-white font-semibold text-sm">Dubai (exact address after confirmation)</div></div></div>
-            <div class="flex items-center gap-3"><span class="text-accent text-lg">&#128187;</span><div><div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">What to bring</div><div class="text-white font-semibold text-sm">Laptop + card for subscription payments (~500 AED)</div></div></div>
-            <div class="flex items-center gap-3"><span class="text-accent text-lg">&#127759;</span><div><div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">Language</div><div class="text-white font-semibold text-sm">Russian</div></div></div>
+        <p class="text-[#CCCCCC] text-sm mb-4">Not included in the price — plan ahead:</p>
+        <div class="flex flex-col gap-3 mb-10">
+          <div class="card-float-dark rounded-xl p-4">
+            <div class="text-white font-semibold text-sm mb-1">Claude Max</div>
+            <p class="text-[#CCCCCC] text-sm leading-relaxed">AI subscription — around <strong class="text-white">500 AED/month</strong>. Used during and after the workshop. Cancel anytime.</p>
+          </div>
+          <div class="card-float-dark rounded-xl p-4">
+            <div class="text-white font-semibold text-sm mb-1">VPS</div>
+            <p class="text-[#CCCCCC] text-sm leading-relaxed">Virtual server — from <strong class="text-white">50 AED/month</strong>. Needed to run your tools.</p>
           </div>
         </div>
-        <div class="border border-accent/30 bg-accent/5 rounded-2xl p-6 mb-8">
-          <div class="flex items-center gap-2 mb-3"><span class="text-accent text-lg">&#128737;</span><h3 class="text-white font-bold text-base">Guarantee</h3></div>
-          <p class="text-[#CCCCCC] text-sm leading-relaxed mb-3">Artashes works with you both days. If by the end of Day 2 you feel the workshop gave you nothing new — write to him personally. We'll figure it out together.</p>
-          <p class="text-[#CCCCCC] text-sm italic">This is not a legal formula. It's how we treat participants.</p>
-        </div>
-        <a href="#apply" class="btn-primary w-full py-4 rounded-xl text-base font-bold text-center block">Apply Now</a>
+
       </div>
+
+      <div>
+        <h3 class="text-white font-bold text-lg mb-5">Practical information</h3>
+        <div class="card-float-dark rounded-2xl p-6 mb-8">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <span class="text-accent text-lg">&#128344;</span>
+              <div>
+                <div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">Time</div>
+                <div class="text-white font-semibold text-sm">10:00–18:00, both days</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-accent text-lg">&#128205;</span>
+              <div>
+                <div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">Location</div>
+                <div class="text-white font-semibold text-sm">Dubai (exact address after confirmation)</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-accent text-lg">&#128187;</span>
+              <div>
+                <div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">What to bring</div>
+                <div class="text-white font-semibold text-sm">Laptop + card for subscription payments (~500 AED)</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-accent text-lg">&#127759;</span>
+              <div>
+                <div class="text-[#CCCCCC] text-xs uppercase tracking-wider mb-0.5">Language</div>
+                <div class="text-white font-semibold text-sm">Russian</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border border-accent/30 bg-accent/5 rounded-2xl p-6 mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-accent text-lg">&#128737;</span>
+            <h3 class="text-white font-bold text-base">Guarantee</h3>
+          </div>
+          <p class="text-[#CCCCCC] text-sm leading-relaxed mb-3">
+            Artashes works with you both days. If by the end of Day 2 you feel the workshop gave you nothing new — write to him personally. We'll figure it out together.
+          </p>
+          <p class="text-[#CCCCCC] text-sm italic">
+            This is not a legal formula. It's how we treat participants.
+          </p>
+        </div>
+
+        <a href="#apply" class="btn-primary w-full py-4 rounded-xl text-base font-bold text-center block">
+          Apply Now
+        </a>
+      </div>
+
     </div>
+
   </div>
 </section>
 
 
-<!-- SECTION 9: APPLY FORM -->
-<section data-section="apply" id="apply" class="bg-dark py-20 sm:py-28">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <hr class="divider-dashed mb-20" />
-    <div class="mb-12">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">Apply for the Workshop</h2>
-      <p class="text-[#CCCCCC] text-base sm:text-lg max-w-2xl leading-relaxed">
-        Artashes personally reads every application. Groups are limited to 10 — participants are selected so both days are productive for everyone.<br />
+<!-- SECTION FAQ -->
+<section data-section="faq" id="faq" class="bg-dark py-12 sm:py-16">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="label-tag mb-6">Questions</div>
+    <h2 class="slide-h2 slide-h2-dark mb-14">Frequently asked <span class="text-accent">questions</span></h2>
+
+    <div class="flex flex-col">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>I'm not technical. Can I handle this?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Most participants have never worked with code or servers. Artashes explains at user level — not developer level. By the end of Day 1 you've already made something with your hands. That is the proof.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>What if I don't understand something along the way?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Group of up to 10 people — Artashes works alongside you, answers as you go. Not "afterwards" and not "ask in the chat". If you're stuck — he's right there.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>What if I pay but the dates don't work out — will I lose the money?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            No. We transfer you to the next cohort at no extra charge. If no cohort works out — we refund. Clarify conditions when you register.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>How does payment work and is it safe?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            After you apply, Artashes will message you on Telegram and confirm participation. Payment is made directly by bank details, no intermediaries. Dubai, safe jurisdiction.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>What do I bring and why another ~500 AED?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            A laptop and a card for online services. ~500 AED is Claude Max (AI subscription) + VPS server for the first month. Without these tools you can't set up the infrastructure. Both subscriptions can be cancelled anytime.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Will everything keep working after the training?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes. Everything you build is yours. The VPS runs as long as you pay ~50 AED/month. Claude — as long as your subscription is active. The agent you wrote runs independently. Plus the group chat: you can ask questions afterwards.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION 9: APPLY -->
+<section data-section="apply" id="apply" class="aurora-bg py-12 sm:py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+    <div class="label-tag mb-6">Participation</div>
+    <h2 class="font-display font-light text-white mb-5" style="font-size:clamp(1.8rem,3.8vw,3.4rem);text-transform:uppercase;letter-spacing:-0.01em">
+      Ready for two days<br />that will change your business?
+    </h2>
+    <p class="text-text-secondary-dark font-sans text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-10">
+      Artashes personally reads every application. Group of up to 10 — participants are selected so both days are productive for everyone.
+    </p>
+    <button onclick="openApplyModal()" class="btn-primary px-10 py-4 rounded-xl text-base">
+      Apply Now
+    </button>
+
+  </div>
+</section>
+
+
+<!-- MODAL: Application form -->
+<div class="modal-overlay" id="apply-modal" role="dialog" aria-modal="true" aria-label="Application form">
+  <div class="modal-box">
+
+    <button class="modal-close" onclick="closeApplyModal()" aria-label="Close">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M13 1L1 13" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="mb-7 pr-8">
+      <div class="label-tag mb-3">Participation</div>
+      <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-2">Apply for the Workshop</h3>
+      <p class="text-text-secondary-dark font-sans text-sm leading-relaxed">
         After applying — Artashes will message you on Telegram and confirm participation.
       </p>
     </div>
-    <div class="max-w-3xl">
-      <form data-testid="form-apply" id="apply-form" novalidate>
+
+    <form data-form="apply" data-testid="form-apply" id="apply-form" novalidate>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+
           <div class="sm:col-span-2">
-            <label for="field-site" class="block text-[#CCCCCC] text-sm font-medium mb-2">Your website <span class="text-[#555555]">(optional)</span></label>
-            <input type="url" id="field-site" name="site" placeholder="https://yoursite.com" class="form-field-dark w-full rounded-xl px-4 py-3 text-sm" />
+            <label for="field-site" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Your website <span class="text-[#555555]">(optional)</span>
+            </label>
+            <input
+              type="url"
+              id="field-site"
+              name="site"
+              placeholder="https://yoursite.com"
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm"
+            />
           </div>
+
           <div>
-            <label for="field-name" class="block text-[#CCCCCC] text-sm font-medium mb-2">Name <span class="text-accent">*</span></label>
-            <input type="text" id="field-name" name="name" placeholder="What to call you" required class="form-field-dark w-full rounded-xl px-4 py-3 text-sm" />
+            <label for="field-name" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Name <span class="text-accent">*</span>
+            </label>
+            <input
+              type="text"
+              id="field-name"
+              name="name"
+              placeholder="What to call you"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm"
+            />
           </div>
+
           <div>
-            <label for="field-telegram" class="block text-[#CCCCCC] text-sm font-medium mb-2">Telegram <span class="text-accent">*</span></label>
-            <input type="text" id="field-telegram" name="telegram" placeholder="@username" required class="form-field-dark w-full rounded-xl px-4 py-3 text-sm" />
+            <label for="field-telegram" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Telegram <span class="text-accent">*</span>
+            </label>
+            <input
+              type="text"
+              id="field-telegram"
+              name="telegram"
+              placeholder="@username"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm"
+            />
           </div>
+
           <div class="sm:col-span-2">
-            <label for="field-contact" class="block text-[#CCCCCC] text-sm font-medium mb-2">Phone or email <span class="text-accent">*</span></label>
-            <input type="text" id="field-contact" name="contact" placeholder="+971 50 000 0000 or email@example.com" required class="form-field-dark w-full rounded-xl px-4 py-3 text-sm" />
+            <label for="field-contact" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Phone or email <span class="text-accent">*</span>
+            </label>
+            <input
+              type="text"
+              id="field-contact"
+              name="contact"
+              placeholder="+971 50 000 0000 or email@example.com"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm"
+            />
           </div>
+
           <div>
-            <label for="field-activity" class="block text-[#CCCCCC] text-sm font-medium mb-2">Business type <span class="text-accent">*</span></label>
-            <select id="field-activity" name="activity" required class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer">
+            <label for="field-activity" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Business type <span class="text-accent">*</span>
+            </label>
+            <select
+              id="field-activity"
+              name="activity"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer"
+            >
               <option value="" disabled selected>Select an option</option>
               <option value="real-estate">Real estate / broker / agency</option>
               <option value="retail">Retail / e-commerce</option>
-              <option value="b2b">B2B services</option>
-              <option value="b2c">B2C services</option>
-              <option value="finance">Finance / investments</option>
+              <option value="b2b">Business services (B2B)</option>
+              <option value="b2c">Consumer services (B2C)</option>
+              <option value="finance">Finance / investment</option>
               <option value="other">Other</option>
             </select>
           </div>
+
           <div>
-            <label for="field-city" class="block text-[#CCCCCC] text-sm font-medium mb-2">City <span class="text-accent">*</span></label>
-            <input type="text" id="field-city" name="city" placeholder="Dubai, Moscow, Almaty..." required class="form-field-dark w-full rounded-xl px-4 py-3 text-sm" />
+            <label for="field-city" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              City <span class="text-accent">*</span>
+            </label>
+            <input
+              type="text"
+              id="field-city"
+              name="city"
+              placeholder="Dubai, Moscow, Almaty..."
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm"
+            />
           </div>
+
           <div class="sm:col-span-2">
-            <label for="field-task" class="block text-[#CCCCCC] text-sm font-medium mb-2">Your task <span class="text-accent">*</span></label>
-            <textarea id="field-task" name="task" rows="4" placeholder="Describe briefly: what you want to automate or what request you're bringing to the workshop" required class="form-field-dark w-full rounded-xl px-4 py-3 text-sm resize-none"></textarea>
+            <label for="field-task" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Your task <span class="text-accent">*</span>
+            </label>
+            <textarea
+              id="field-task"
+              name="task"
+              rows="4"
+              placeholder="Describe briefly: what you want to automate or what request you're bringing to the workshop"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm resize-none"
+            ></textarea>
           </div>
+
           <div>
-            <label for="field-experience" class="block text-[#CCCCCC] text-sm font-medium mb-2">Your AI experience <span class="text-accent">*</span></label>
-            <select id="field-experience" name="experience" required class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer">
+            <label for="field-experience" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              Your AI experience <span class="text-accent">*</span>
+            </label>
+            <select
+              id="field-experience"
+              name="experience"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer"
+            >
               <option value="" disabled selected>Select an option</option>
-              <option value="none">None — I've heard about it but haven't tried</option>
+              <option value="none">None — heard about it but haven't tried</option>
               <option value="sometimes">Sometimes use ChatGPT or similar</option>
               <option value="regular">Regularly use AI tools at work</option>
-              <option value="implemented">Already implemented AI in business processes</option>
+              <option value="implemented">Have already implemented AI in business processes</option>
               <option value="technical">Technical background, familiar with the topic</option>
             </select>
           </div>
+
           <div>
-            <label for="field-source" class="block text-[#CCCCCC] text-sm font-medium mb-2">How did you hear about us <span class="text-accent">*</span></label>
-            <select id="field-source" name="source" required class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer">
+            <label for="field-source" class="block text-[#CCCCCC] text-sm font-medium mb-2">
+              How did you hear about us <span class="text-accent">*</span>
+            </label>
+            <select
+              id="field-source"
+              name="source"
+              required
+              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer"
+            >
               <option value="" disabled selected>Select an option</option>
               <option value="instagram">Instagram / Stories</option>
               <option value="telegram">Telegram channel</option>
-              <option value="referral">Friend's recommendation</option>
+              <option value="referral">Recommendation from someone</option>
               <option value="linkedin">LinkedIn</option>
               <option value="event">Event / networking</option>
               <option value="google">Google search</option>
@@ -626,39 +1244,67 @@
               <option value="other">Other</option>
             </select>
           </div>
+
         </div>
-        <button type="submit" data-testid="form-submit" id="form-submit-btn" class="btn-primary w-full py-4 rounded-xl text-base font-bold mt-2">
+
+        <button
+          type="submit"
+          data-testid="form-submit"
+          data-submit-id="submit-btn"
+          id="form-submit-btn"
+          class="btn-primary w-full py-4 rounded-xl text-base font-bold mt-2"
+        >
           Submit Application
         </button>
+
       </form>
 
-      <div data-testid="success-block" id="success-block" class="hidden mt-8 card-float-dark rounded-2xl p-10 text-center">
-        <div class="text-5xl mb-4">&#10003;</div>
-        <h3 class="text-white text-2xl font-black mb-3">Application Received</h3>
-        <p class="text-[#CCCCCC] text-base leading-relaxed mb-8 max-w-md mx-auto">
+      <div
+        data-success="true"
+        data-testid="success-block"
+        id="success-block"
+        class="hidden mt-4 text-center py-8"
+      >
+        <div class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="font-display text-white text-2xl font-extrabold mb-3">Application received</h3>
+        <p class="text-text-secondary-dark font-sans text-base leading-relaxed mb-8 max-w-sm mx-auto">
           Artashes has received it and will message you on Telegram within the day.<br />
-          If you prefer — message him directly so you don't have to wait.
+          If you'd like — message him yourself so you don't have to wait.
         </p>
-        <a href="https://t.me/ArtashesAIBot" target="_blank" rel="noopener" data-testid="bot-link" class="btn-primary inline-block px-10 py-4 rounded-xl text-base font-bold">
+        <a
+          href="https://t.me/ArtashesAIBot"
+          target="_blank"
+          rel="noopener"
+          data-testid="bot-link"
+          class="btn-primary inline-block px-10 py-4 rounded-xl text-base"
+        >
           Open @ArtashesAIBot
         </a>
       </div>
-    </div>
+
   </div>
-</section>
+</div>
 
 
 <!-- FOOTER -->
 <footer class="bg-[#050505] border-t border-white/8 py-12">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
+
       <div>
         <div class="flex items-center gap-2 mb-4">
           <span class="text-accent font-black text-xl tracking-tight">AI</span>
           <span class="text-white font-bold text-xl tracking-tight">Workshop</span>
         </div>
-        <p class="text-[#CCCCCC] text-sm leading-relaxed">Hands-on offline AI workshop for business owners.<br />Dubai · Russian language</p>
+        <p class="text-[#CCCCCC] text-sm leading-relaxed">
+          Hands-on offline AI workshop for business owners.<br />
+          Dubai · Russian language
+        </p>
       </div>
+
       <div>
         <div class="text-[#CCCCCC] text-xs uppercase tracking-widest font-semibold mb-4">Navigation</div>
         <div class="flex flex-col gap-2">
@@ -666,28 +1312,48 @@
           <a href="#speaker"      class="text-[#CCCCCC] hover:text-white text-sm transition-colors">Speaker</a>
           <a href="#testimonials" class="text-[#CCCCCC] hover:text-white text-sm transition-colors">Reviews</a>
           <a href="#offer"        class="text-[#CCCCCC] hover:text-white text-sm transition-colors">Pricing</a>
-          <a href="#apply"        class="text-accent hover:text-white text-sm transition-colors font-semibold">Apply</a>
+          <a href="#apply"        class="text-accent hover:text-white text-sm transition-colors font-semibold">Apply Now</a>
         </div>
       </div>
+
       <div>
         <div class="text-[#CCCCCC] text-xs uppercase tracking-widest font-semibold mb-4">Contacts</div>
         <div class="flex flex-col gap-3">
-          <a href="https://t.me/ArtashesAIBot" target="_blank" rel="noopener" class="flex items-center gap-2 text-[#CCCCCC] hover:text-white text-sm transition-colors">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+          <a
+            href="https://t.me/ArtashesAIBot"
+            target="_blank" rel="noopener"
+            class="flex items-center gap-2 text-[#CCCCCC] hover:text-white text-sm transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/>
+            </svg>
             @ArtashesAIBot
           </a>
-          <a href="https://wa.me/971000000000" target="_blank" rel="noopener" class="flex items-center gap-2 text-[#CCCCCC] hover:text-white text-sm transition-colors">
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 1.764.458 3.42 1.26 4.862L0 20l5.294-1.24A9.958 9.958 0 0010 20c5.523 0 10-4.477 10-10S15.523 0 10 0zm-1.5 5.5c-.28 0-.72.1-.972.372C7.276 6.144 6.5 6.9 6.5 8.25c0 1.35 1.034 2.658 1.178 2.842.144.184 2.028 3.096 4.956 4.347.692.3 1.232.478 1.654.611.694.221 1.325.19 1.824.115.556-.083 1.714-.702 1.955-1.38.24-.677.24-1.258.168-1.38-.072-.12-.264-.192-.552-.336s-1.703-.842-1.966-.937c-.264-.096-.456-.144-.648.144-.192.288-.744.936-.912 1.128-.168.192-.336.216-.624.072-.288-.144-1.216-.448-2.316-1.428-.856-.762-1.434-1.703-1.602-1.991-.168-.288-.018-.443.126-.587.13-.13.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.56-.888-2.136C9.27 5.78 9.02 5.5 8.5 5.5z"/></svg>
+          <a
+            href="https://wa.me/971000000000"
+            target="_blank" rel="noopener"
+            class="flex items-center gap-2 text-[#CCCCCC] hover:text-white text-sm transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 1.764.458 3.42 1.26 4.862L0 20l5.294-1.24A9.958 9.958 0 0010 20c5.523 0 10-4.477 10-10S15.523 0 10 0zm-1.5 5.5c-.28 0-.72.1-.972.372C7.276 6.144 6.5 6.9 6.5 8.25c0 1.35 1.034 2.658 1.178 2.842.144.184 2.028 3.096 4.956 4.347.692.3 1.232.478 1.654.611.694.221 1.325.19 1.824.115.556-.083 1.714-.702 1.955-1.38.24-.677.24-1.258.168-1.38-.072-.12-.264-.192-.552-.336s-1.703-.842-1.966-.937c-.264-.096-.456-.144-.648.144-.192.288-.744.936-.912 1.128-.168.192-.336.216-.624.072-.288-.144-1.216-.448-2.316-1.428-.856-.762-1.434-1.703-1.602-1.991-.168-.288-.018-.443.126-.587.13-.13.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.56-.888-2.136C9.27 5.78 9.02 5.5 8.5 5.5z"/>
+            </svg>
             WhatsApp
           </a>
-          <a href="mailto:hello@aiworkshop.international" class="flex items-center gap-2 text-[#CCCCCC] hover:text-white text-sm transition-colors">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <a
+            href="mailto:hello@aiworkshop.international"
+            class="flex items-center gap-2 text-[#CCCCCC] hover:text-white text-sm transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
             hello@aiworkshop.international
           </a>
         </div>
       </div>
+
     </div>
-    <hr class="divider-dashed mb-6" />
+
     <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#555555]">
       <span>&copy; 2026 AI Workshop. All rights reserved.</span>
       <div class="flex items-center gap-4">
@@ -699,65 +1365,266 @@
         <span class="text-white bg-accent px-2 py-0.5 rounded font-bold">EN</span>
       </div>
     </div>
+
   </div>
 </footer>
 
 
+<!-- JavaScript -->
 <script>
-  (function () {
-    var btn  = document.getElementById('burger-btn');
-    var menu = document.getElementById('mobile-menu');
+  // Burger menu
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn   = document.getElementById('burger-btn');
+    var menu  = document.getElementById('mobile-menu');
+    var nav   = document.querySelector('nav[data-testid="nav"]');
+    if (!btn || !menu) return;
     var lines = btn.querySelectorAll('.burger-line');
-    btn.addEventListener('click', function () {
-      var isOpen = menu.classList.contains('open');
-      menu.classList.toggle('open');
-      if (!isOpen) {
-        lines[0].style.transform = 'translateY(8px) rotate(45deg)';
-        lines[1].style.opacity   = '0';
-        lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
-      } else {
-        lines[0].style.transform = '';
-        lines[1].style.opacity   = '';
-        lines[2].style.transform = '';
-      }
-    });
+
+    var overlay = document.createElement('div');
+    overlay.id = 'nav-overlay';
+    document.body.appendChild(overlay);
+
+    function closeBurger() {
+      menu.classList.remove('open');
+      nav  && nav.classList.remove('menu-open');
+      overlay.classList.remove('active');
+      document.body.classList.remove('nav-open');
+      lines[0].style.transform = '';
+      lines[1].style.opacity   = '';
+      lines[2].style.transform = '';
+    }
+
+    function openBurger() {
+      menu.classList.add('open');
+      nav  && nav.classList.add('menu-open');
+      overlay.classList.add('active');
+      document.body.classList.add('nav-open');
+      lines[0].style.transform = 'translateY(8px) rotate(45deg)';
+      lines[1].style.opacity   = '0';
+      lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+    }
+
+    function toggleBurger(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      menu.classList.contains('open') ? closeBurger() : openBurger();
+    }
+
+    btn.addEventListener('click',      toggleBurger);
+    btn.addEventListener('touchstart', toggleBurger, { passive: false });
+    overlay.addEventListener('click',      closeBurger);
+    overlay.addEventListener('touchstart', closeBurger, { passive: true });
+
     menu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        menu.classList.remove('open');
-        lines[0].style.transform = '';
-        lines[1].style.opacity   = '';
-        lines[2].style.transform = '';
+      link.addEventListener('click', closeBurger);
+    });
+
+    var lastY = window.scrollY;
+    window.addEventListener('scroll', function () {
+      if (menu.classList.contains('open') && Math.abs(window.scrollY - lastY) > 60) closeBurger();
+      lastY = window.scrollY;
+    }, { passive: true });
+  });
+
+
+  // Modal: open / close
+  function openApplyModal() {
+    var modal = document.getElementById('apply-modal');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeApplyModal() {
+    var modal = document.getElementById('apply-modal');
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById('apply-modal');
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeApplyModal();
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href="#apply"], a[href*="#apply"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        openApplyModal();
       });
     });
-  })();
+  });
 
+
+  // Form: submit → success
   (function () {
     var form         = document.getElementById('apply-form');
     var successBlock = document.getElementById('success-block');
     var submitBtn    = document.getElementById('form-submit-btn');
+
     if (!form || !successBlock) return;
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
       var required = form.querySelectorAll('[required]');
       var valid = true;
       required.forEach(function (field) {
         if (!field.value.trim()) {
           valid = false;
-          field.style.borderColor = '#FF4444';
-          field.addEventListener('input', function () { field.style.borderColor = ''; }, { once: true });
+          field.style.borderColor = '#E84545';
+          field.addEventListener('input', function () {
+            field.style.borderColor = '';
+          }, { once: true });
         }
       });
       if (!valid) return;
+
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Submitting...';
+      submitBtn.innerHTML = '<span class="spinner" aria-hidden="true"></span>Submitting...';
       submitBtn.style.opacity = '0.7';
+
       setTimeout(function () {
         form.style.display = 'none';
         successBlock.classList.remove('hidden');
-        successBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }, 300);
     });
   })();
+
+
+  // Spotlight — Hero follows cursor
+  (function () {
+    var hero = document.querySelector('[data-section="hero"]');
+    if (!hero) return;
+    hero.addEventListener('mousemove', function (e) {
+      var rect = hero.getBoundingClientRect();
+      var x = ((e.clientX - rect.left) / rect.width  * 100).toFixed(1) + '%';
+      var y = ((e.clientY - rect.top)  / rect.height * 100).toFixed(1) + '%';
+      hero.style.setProperty('--mx', x);
+      hero.style.setProperty('--my', y);
+    });
+  })();
+
+
+  // 3D cards: tilt on hover (desktop only)
+  (function () {
+    if (window.matchMedia('(hover: none)').matches) return;
+    document.querySelectorAll('.card-3d').forEach(function (card) {
+      card.addEventListener('mousemove', function (e) {
+        var rect = card.getBoundingClientRect();
+        var cx = rect.left + rect.width  / 2;
+        var cy = rect.top  + rect.height / 2;
+        var rx = ((e.clientY - cy) / (rect.height / 2)) * -8;
+        var ry = ((e.clientX - cx) / (rect.width  / 2)) *  8;
+        card.style.transform = 'perspective(600px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+      });
+      card.addEventListener('mouseleave', function () {
+        card.style.transform = '';
+      });
+    });
+  })();
+
+
+  // Section reveal on scroll
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var targets = document.querySelectorAll('[data-section]:not([data-section="hero"]) > div > *');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    targets.forEach(function (el) {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+    setTimeout(function () {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(function (el) {
+        el.classList.add('visible');
+      });
+    }, 1200);
+  })();
+
+
+  // Active nav highlight on scroll
+  (function () {
+    var sections = document.querySelectorAll('[data-section]');
+    var navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+    function onScroll() {
+      var scrollY = window.scrollY + 100;
+      var current = '';
+      sections.forEach(function (s) {
+        if (s.offsetTop <= scrollY) current = s.getAttribute('data-section');
+      });
+      navLinks.forEach(function (link) {
+        link.classList.remove('text-white');
+        link.classList.add('text-[#9BA1AB]');
+        var href = link.getAttribute('href').replace('#', '');
+        if (href === current) {
+          link.classList.remove('text-[#9BA1AB]');
+          link.classList.add('text-white');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+
+
+  // Counters: animate from zero on viewport entry
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var counters = document.querySelectorAll('.counter[data-count]');
+    function animateCounter(el) {
+      var target = parseFloat(el.getAttribute('data-count'));
+      var isPercent = el.textContent.includes('%');
+      var isPlus = el.textContent.includes('+');
+      var suffix = (isPercent ? '%' : '') + (isPlus ? '+' : '');
+      var duration = 1400;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var ease = 1 - Math.pow(1 - progress, 3);
+        var val = Math.round(ease * target);
+        el.textContent = val + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      el.textContent = '0' + suffix;
+      requestAnimationFrame(step);
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function (el) { io.observe(el); });
+  })();
+
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    var item = btn.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function (i) {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.maxHeight = '0';
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      var answer = item.querySelector('.faq-answer');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  }
 </script>
 
 </body>
