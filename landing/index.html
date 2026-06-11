@@ -8,34 +8,15 @@
   <meta property="og:title" content="AI Workshop — 2 дня в Дубае для владельцев бизнеса" />
   <meta property="og:description" content="Практический офлайн-воркшоп по AI. 2 дня практики — уходите с работающим AI-инструментом под вашу задачу." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23FF6200'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,sans-serif' font-weight='900' font-size='18' fill='white'>AI</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23F97316'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,sans-serif' font-weight='900' font-size='18' fill='white'>AI</text></svg>" />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Шрифты: preconnect + link (быстрее @import в CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500&family=Wix+Madefor+Display:wght@400;500;600;700&display=swap" />
 
-  <!-- Tailwind config — цвета дизайн-системы -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            dark:    '#0E0B08',
-            light:   '#F5F0E8',
-            accent:  '#E8580A',
-            'accent-hover': '#D44A08',
-            'text-primary-dark':   '#FFFFFF',
-            'text-secondary-dark': '#B8AFA8',
-            'text-primary-light':  '#0E0B08',
-            'text-secondary-light':'#6B6460',
-          },
-          fontFamily: {
-            sans:  ["'Wix Madefor Display'", 'Inter', 'sans-serif'],
-            serif: ["'Playfair Display'", 'Georgia', 'serif'],
-          },
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind CSS (скомпилированный — 14KB вместо 400KB CDN) -->
+  <link rel="stylesheet" href="./assets/css/tailwind.css" />
 
   <!-- Кастомные стили -->
   <link rel="stylesheet" href="./assets/css/custom.css" />
@@ -110,89 +91,80 @@
 <!-- ============================================================
      СЕКЦИЯ 1 — HERO (тёмный фон)
      ============================================================ -->
-<section data-section="hero" id="hero" class="hero-spotlight aurora-bg relative overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32">
-  <!-- Сетка фона -->
-  <div class="grid-lines"></div>
-  <!-- Декоративные свечения -->
-  <div class="hero-glow"></div>
-  <div class="hero-glow-left"></div>
+<section data-section="hero" id="hero" class="hero-spotlight aurora-bg relative overflow-hidden">
 
-  <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl">
+  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-24 sm:pt-28 pb-8 min-h-[94vh] flex flex-col">
 
-      <!-- Бейдж -->
-      <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/25 rounded-full px-4 py-1.5 mb-8">
-        <span class="w-2 h-2 rounded-full bg-accent pulse-dot"></span>
-        <span class="text-accent text-sm font-sans font-semibold tracking-wide">Дубай · Практический офлайн-воркшоп</span>
-      </div>
+    <!-- Угловые метки как на слайдах -->
+    <div class="flex justify-between items-start mb-10 sm:mb-14">
+      <span class="corner-label text-white">AI <span class="text-accent">&times;</span> BUSINESS</span>
+      <span class="corner-label text-right text-[#9BA1AB] hidden sm:block"><span class="text-accent">AI</span> — новая<br />инфраструктура бизнеса</span>
+    </div>
 
-      <!-- Главный заголовок -->
-      <h1 class="text-[2.6rem] sm:text-5xl lg:text-[4.2rem] font-medium text-white leading-[1.15] mb-6">
-        2 дня — и ты знаешь<br class="hidden sm:block" />
-        как <span class="gradient-text">забрать рынок</span><br class="hidden sm:block" />
-        у конкурентов, которые<br class="hidden sm:block" />
-        об AI только читают
-      </h1>
+    <!-- Гигантский заголовок: оранжевые слова внутри фразы -->
+    <h1 class="hero-headline max-w-5xl mb-4 sm:mb-6">
+      <span class="block">2 дня — и ты знаешь</span>
+      <span class="block">как <span class="text-accent">забрать рынок</span></span>
+      <span class="block">у конкурентов, которые</span>
+      <span class="block">только интересуются <span class="text-accent">AI</span></span>
+    </h1>
 
-      <!-- Подзаголовок -->
-      <p class="text-text-secondary-dark font-sans text-lg sm:text-xl leading-relaxed mb-8 max-w-2xl">
-        Практический офлайн-воркшоп в Дубае: разбираешься в AI не по чужим словам, а руками.<br />
-        Выходишь с пониманием, что можно автоматизировать в твоём бизнесе прямо сейчас — и сколько это реально стоит.
-      </p>
+    <!-- Подзаголовок аудитории -->
+    <div class="corner-label text-accent mb-10 sm:mb-12" style="font-size:11px;letter-spacing:0.2em">для собственников бизнеса</div>
 
-      <!-- Три буллета -->
-      <ul class="flex flex-col gap-4 mb-10 list-none p-0 m-0">
+    <!-- Журнальный CTA: точка — текст — стрелка -->
+    <div class="flex flex-wrap items-center gap-6 sm:gap-10 mb-5">
+      <a href="#apply" data-testid="cta-primary" class="cta-journal">
+        Подать заявку <span class="arrow">&#10142;</span>
+      </a>
+      <a href="https://wa.me/971000000000" target="_blank" rel="noopener"
+         class="text-[#9BA1AB] hover:text-white text-sm font-medium transition-colors">
+        или написать в WhatsApp
+      </a>
+    </div>
+
+    <!-- Ближайшая дата убрана для кейса -->
+
+    <div class="flex-grow"></div>
+
+    <!-- Низ слайда: проверь себя + буллеты + метрики -->
+    <div class="max-w-2xl">
+      <div class="corner-label text-accent mb-5" style="font-size:13px">Проверь себя</div>
+      <ul class="journal-bullets list-none p-0 m-0 mb-10">
         <li class="flex items-start gap-3">
-          <div class="bullet-icon" aria-hidden="true"></div>
-          <p class="text-text-secondary-dark font-sans text-base leading-relaxed">
-            <strong class="text-white font-semibold">Видишь, где теряешь деньги</strong> — конкретные задачи в твоём бизнесе, которые AI закрывает дешевле и быстрее любого подрядчика
+          <p class="text-[#9BA1AB] text-base sm:text-lg leading-relaxed">
+            <strong class="text-white font-medium">Видишь, где теряешь деньги</strong> — конкретные задачи в твоём бизнесе, которые AI закрывает дешевле и быстрее любого подрядчика
           </p>
         </li>
         <li class="flex items-start gap-3">
-          <div class="bullet-icon" aria-hidden="true"></div>
-          <p class="text-text-secondary-dark font-sans text-base leading-relaxed">
-            <strong class="text-white font-semibold">Понимаешь возможности раньше конкурентов</strong> — то, что 95% рынка ещё не пробовали руками, ты уже умеешь применять
+          <p class="text-[#9BA1AB] text-base sm:text-lg leading-relaxed">
+            <strong class="text-white font-medium">Понимаешь возможности раньше конкурентов</strong> — то, что 95% рынка ещё не пробовали руками, ты уже умеешь применять
           </p>
         </li>
         <li class="flex items-start gap-3">
-          <div class="bullet-icon" aria-hidden="true"></div>
-          <p class="text-text-secondary-dark font-sans text-base leading-relaxed">
-            <strong class="text-white font-semibold">Делегируешь с контролем</strong> — ставишь задачи AI-инструментам сам, проверяешь результат, не переплачиваешь за «экспертизу»
+          <p class="text-[#9BA1AB] text-base sm:text-lg leading-relaxed">
+            <strong class="text-white font-medium">Делегируешь с контролем</strong> — ставишь задачи AI-инструментам сам, проверяешь результат, не переплачиваешь за «экспертизу»
           </p>
         </li>
       </ul>
 
-      <!-- CTA-кнопки -->
-      <div class="flex flex-col sm:flex-row gap-4 mb-14">
-        <a href="#apply" data-testid="cta-primary" class="btn-primary px-8 py-4 rounded-xl text-base font-bold text-center">
-          Подать заявку
-        </a>
-        <a href="https://wa.me/971000000000" target="_blank" rel="noopener"
-           class="btn-outline-white px-8 py-4 rounded-xl text-base font-semibold text-center flex items-center justify-center gap-2">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 1.764.458 3.42 1.26 4.862L0 20l5.294-1.24A9.958 9.958 0 0010 20c5.523 0 10-4.477 10-10S15.523 0 10 0zm-1.5 5.5c-.28 0-.72.1-.972.372C7.276 6.144 6.5 6.9 6.5 8.25c0 1.35 1.034 2.658 1.178 2.842.144.184 2.028 3.096 4.956 4.347.692.3 1.232.478 1.654.611.694.221 1.325.19 1.824.115.556-.083 1.714-.702 1.955-1.38.24-.677.24-1.258.168-1.38-.072-.12-.264-.192-.552-.336s-1.703-.842-1.966-.937c-.264-.096-.456-.144-.648.144-.192.288-.744.936-.912 1.128-.168.192-.336.216-.624.072-.288-.144-1.216-.448-2.316-1.428-.856-.762-1.434-1.703-1.602-1.991-.168-.288-.018-.443.126-.587.13-.13.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.56-.888-2.136C9.27 5.78 9.02 5.5 8.5 5.5z" fill="currentColor"/>
-          </svg>
-          Написать в WhatsApp
-        </a>
-      </div>
-
       <!-- Метрики -->
-      <div class="grid grid-cols-3 gap-6 max-w-lg">
-        <div class="text-center" data-testid="metric-participants">
-          <div class="metric-number">47</div>
-          <div class="text-[#CCCCCC] text-sm mt-1">участников</div>
+      <div class="grid grid-cols-3 gap-3 max-w-md mb-10">
+        <div class="card-float-dark card-3d rounded-xl p-4 text-center" data-testid="metric-participants">
+          <div class="metric-number counter text-3xl sm:text-4xl" data-count="41">41</div>
+          <div class="text-[#9BA1AB] font-sans text-xs mt-1">прошли воркшоп</div>
         </div>
-        <div class="text-center" data-testid="metric-group">
-          <div class="metric-number">10</div>
-          <div class="text-[#CCCCCC] text-sm mt-1">человек в группе</div>
+        <div class="card-float-dark card-3d rounded-xl p-4 text-center" data-testid="metric-group">
+          <div class="metric-number counter text-3xl sm:text-4xl" data-count="10">10</div>
+          <div class="text-[#9BA1AB] font-sans text-xs mt-1">человек в группе</div>
         </div>
-        <div class="text-center" data-testid="metric-days">
-          <div class="metric-number">2</div>
-          <div class="text-[#CCCCCC] text-sm mt-1">дня в Дубае</div>
+        <div class="card-float-dark card-3d rounded-xl p-4 text-center" data-testid="metric-days">
+          <div class="metric-number counter text-3xl sm:text-4xl" data-count="2">2</div>
+          <div class="text-[#9BA1AB] font-sans text-xs mt-1">дня в Дубае</div>
         </div>
       </div>
-
     </div>
+
   </div>
 </section>
 
@@ -200,83 +172,145 @@
 <!-- ============================================================
      СЕКЦИЯ 2 — БОЛЬ + ДО/ПОСЛЕ (тёмный фон)
      ============================================================ -->
-<section data-section="pain" id="pain" class="bg-dark py-20 sm:py-28">
+<section data-section="pain" id="pain" class="bg-dark py-12 sm:py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <hr class="divider-dashed mb-20" />
 
     <!-- Заголовок -->
     <div class="mb-14">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">Узнаёшь себя?</h2>
+      <h2 class="slide-h2 slide-h2-dark mb-4">Узнаёшь <span class="text-accent">себя?</span></h2>
     </div>
 
     <!-- 4 боли -->
-    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-20 list-none p-0 m-0">
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10 list-none p-0 m-0">
 
-      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
-        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
-        <p class="text-[#CCCCCC] text-base leading-relaxed">
+      <li class="glass-card-dark card-3d p-6 flex items-start gap-4">
+        <div class="icon-chip" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.2c-.5-.8-1.4-1.2-2.5-1.2-1.5 0-2.7.8-2.7 2s1.1 1.7 2.7 2c1.6.3 2.7.8 2.7 2s-1.2 2-2.7 2c-1.1 0-2-.4-2.5-1.2M12 6.5V8m0 8v1.5"/></svg></div>
+        <p class="text-[#C8CCD2] text-base leading-relaxed">
           Платишь подрядчикам за AI-задачи — и не понимаешь, нормальная это цена или тебя разводят
         </p>
       </li>
 
-      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
-        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
-        <p class="text-[#CCCCCC] text-base leading-relaxed">
+      <li class="glass-card-dark card-3d p-6 flex items-start gap-4">
+        <div class="icon-chip" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div>
+        <p class="text-[#C8CCD2] text-base leading-relaxed">
           Слышишь про ChatGPT, автоматизацию, AI-агентов — но конкретно для твоего бизнеса непонятно, с чего начать
         </p>
       </li>
 
-      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
-        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
-        <p class="text-[#CCCCCC] text-base leading-relaxed">
+      <li class="glass-card-dark card-3d p-6 flex items-start gap-4">
+        <div class="icon-chip" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M9 8.5h6M9 12h6M9 15.5h3.5"/></svg></div>
+        <p class="text-[#C8CCD2] text-base leading-relaxed">
           Пробовал нанять кого-то «разобраться с AI» — получил красивую презентацию и ничего работающего
         </p>
       </li>
 
-      <li class="card-float-dark rounded-2xl p-6 flex items-start gap-4">
-        <div class="text-accent text-2xl mt-0.5 flex-shrink-0" aria-hidden="true">&#8226;</div>
-        <p class="text-[#CCCCCC] text-base leading-relaxed">
+      <li class="glass-card-dark card-3d p-6 flex items-start gap-4">
+        <div class="icon-chip" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <p class="text-[#C8CCD2] text-base leading-relaxed">
           Конкуренты что-то внедряют, ты видишь результат, но не знаешь, как они это делают
         </p>
       </li>
 
     </ul>
 
-    <!-- До/После -->
-    <h3 class="text-2xl sm:text-3xl font-black text-white mb-8">Что меняется после двух дней</h3>
+    <!-- Раньше/сейчас с реальными ценами -->
+    <h3 class="slide-h2 slide-h2-dark mb-8" style="font-size:clamp(1.2rem,2.2vw,1.8rem)">Что меняется: <span class="text-accent">до и после</span></h3>
 
-    <div class="overflow-x-auto rounded-2xl">
-      <table class="before-after-table w-full text-sm">
-        <thead>
-          <tr>
-            <th class="text-left p-4 rounded-tl-2xl w-1/2">Раньше</th>
-            <th class="text-left p-4 rounded-tr-2xl w-1/2" style="background:rgba(255,98,0,0.2);color:#FF6200;">Сейчас</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="p-4 text-[#CCCCCC] align-top">Платишь подрядчику 1500 AED за простого бота — ждёшь неделю, получаешь не то</td>
-            <td class="p-4 text-white align-top">Понимаешь задачу изнутри, ставишь её точно — платишь в 3 раза меньше и получаешь быстрее</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[#CCCCCC] align-top">Хочешь лендинг — идёшь в агентство, платишь за разработку</td>
-            <td class="p-4 text-white align-top">Знаешь, как собрать рабочий лендинг за один день, и понимаешь, за что реально стоит платить</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[#CCCCCC] align-top">Клиенты в WhatsApp — обрабатываешь вручную, теряешь лиды</td>
-            <td class="p-4 text-white align-top">Настраиваешь автоматическую квалификацию: бот отсеивает нецелевых, нужные — тебе</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[#CCCCCC] align-top">Записи встреч копятся, никто не слушает</td>
-            <td class="p-4 text-white align-top">Транскрипт митинга → задачи в чат команды автоматически</td>
-          </tr>
-          <tr>
-            <td class="p-4 text-[#CCCCCC] align-top rounded-bl-2xl">CRM стоит, данные устаревают</td>
-            <td class="p-4 text-white align-top rounded-br-2xl">AI сам напоминает, поздравляет, делает follow-up — без менеджера</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="price-compare mb-8">
+      <!-- Раньше -->
+      <div class="price-col-before">
+        <div class="price-col-header">Раньше платили</div>
+        <div class="price-row">
+          <span>Telegram-бот у подрядчика</span>
+          <span class="price-old">$3 000–8 000 + 3 недели</span>
+        </div>
+        <div class="price-row">
+          <span>WhatsApp-автоматизация</span>
+          <span class="price-old">$2 000–5 000 или $200/мес SaaS</span>
+        </div>
+        <div class="price-row">
+          <span>Лендинг от агентства</span>
+          <span class="price-old">$1 500–5 000 + неделя правок</span>
+        </div>
+        <div class="price-row">
+          <span>AI-агент для задач бизнеса</span>
+          <span class="price-old">$5 000–20 000 — если найдёшь кто умеет</span>
+        </div>
+        <div class="price-row">
+          <span>Парсер конкурентов</span>
+          <span class="price-old">$2 000–6 000 разработка + поддержка</span>
+        </div>
+      </div>
+      <!-- Сейчас -->
+      <div class="price-col-after">
+        <div class="price-col-header">После воркшопа</div>
+        <div class="price-row">
+          <span>Сам за 1 день</span>
+          <span class="price-new">Меняешь сам — без брифов и доплат</span>
+        </div>
+        <div class="price-row">
+          <span>Своя инфраструктура</span>
+          <span class="price-new">Без квот и ежемесячных платежей</span>
+        </div>
+        <div class="price-row">
+          <span>За вечер</span>
+          <span class="price-new">Понимаешь что справедливо, когда делегируешь</span>
+        </div>
+        <div class="price-row">
+          <span>Строишь сам под свою задачу</span>
+          <span class="price-new">За 2 дня — руками, с готовым результатом</span>
+        </div>
+        <div class="price-row">
+          <span>Несколько часов на сборку</span>
+          <span class="price-new">Под конкретный запрос, без подрядчика</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D ISO-визуализация -->
+    <div class="iso-viz-wrap mb-4 hidden lg:block">
+      <div class="iso-viz">
+
+        <div class="iso-card card-3d" style="max-width:260px;margin:0 auto 0 30%">
+          <div class="iso-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+          <div><div class="iso-card-text">ANALYSIS</div><div class="iso-card-lines"><div class="iso-card-line"></div><div class="iso-card-line"></div></div></div>
+        </div>
+
+        <div class="iso-connector"></div>
+
+        <div class="iso-card card-3d" style="max-width:300px;margin:0 auto;background:linear-gradient(135deg,rgba(232,114,42,0.18) 0%,rgba(232,114,42,0.05) 100%);border-color:rgba(232,114,42,0.4)">
+          <div class="iso-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+          <div><div class="iso-card-text">PROCESS IDENTIFIED</div><div class="iso-card-lines"><div class="iso-card-line"></div><div class="iso-card-line"></div></div></div>
+        </div>
+
+        <div class="iso-connector"></div>
+
+        <div class="grid grid-cols-2 gap-4" style="max-width:560px;margin:0 auto">
+          <div class="iso-card card-3d">
+            <div class="iso-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div><div class="iso-card-text">TOOLS</div><div class="iso-card-lines"><div class="iso-card-line"></div><div class="iso-card-line"></div></div></div>
+          </div>
+          <div class="iso-card card-3d">
+            <div class="iso-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div><div class="iso-card-text">AUTOMATION</div><div class="iso-card-lines"><div class="iso-card-line"></div><div class="iso-card-line"></div></div></div>
+          </div>
+        </div>
+
+        <div class="iso-connector"></div>
+
+        <div class="grid grid-cols-2 gap-4" style="max-width:560px;margin:0 auto">
+          <div class="iso-card card-3d" style="background:linear-gradient(135deg,rgba(255,255,255,0.07) 0%,rgba(232,114,42,0.06) 100%)">
+            <div class="iso-card-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+            <div><div class="iso-card-text">RESULT</div><div class="iso-card-lines"><div class="iso-card-line"></div><div class="iso-card-line"></div></div></div>
+          </div>
+          <a href="#apply" class="btn-primary iso-cta-pulse rounded-xl flex items-center justify-center gap-2 text-sm font-bold" style="min-height:56px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Записаться
+          </a>
+        </div>
+
+      </div>
     </div>
 
   </div>
@@ -286,85 +320,75 @@
 <!-- ============================================================
      СЕКЦИЯ 3 — КОМУ ПОДХОДИТ (светлый фон)
      ============================================================ -->
-<section data-section="audience" id="audience" class="bg-light py-20 sm:py-28">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<section data-section="audience" id="audience" class="slide-light relative overflow-hidden py-12 sm:py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-    <!-- Заголовок -->
-    <div class="mb-14">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] mb-3">Для кого этот воркшоп</h2>
-      <p class="text-[#555555] text-lg">Воркшоп для тебя, если:</p>
+    <div class="grid grid-cols-1 lg:grid-cols-[44%_1fr] gap-12 lg:gap-16 items-start mb-10">
+
+      <!-- Левая колонка — как на слайде -->
+      <div class="pt-2">
+        <h2 class="slide-h2 mb-9">Для кого <span class="text-accent">этот воркшоп?</span></h2>
+
+        <p class="text-[#5A5F68] text-lg leading-relaxed max-w-md">
+          Часто бывает так: про AI все говорят,
+          а в твоей компании <span class="text-accent">никто не пробовал руками</span>.
+        </p>
+
+        <hr class="dotted-sep" />
+
+        <p class="font-display text-[#15171C] font-semibold text-xl leading-snug">
+          Это не лекции.<br />
+          <span class="text-accent">Два дня — твой мозг,<br />твои задачи, твой AI-агент.</span>
+        </p>
+      </div>
+
+      <!-- Правая колонка — стеклянный каскад как на слайде -->
+      <ul data-testid="fits-list" class="glass-cascade list-none p-0 m-0">
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            Ты владелец бизнеса или управляющий — и в твоей работе есть рутина, которую можно передать инструментам
+          </p>
+        </li>
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            Ты не технарь и не хочешь им становиться — хочешь понимать AI ровно настолько, чтобы управлять им, а не зависеть от тех, кто «умеет»
+          </p>
+        </li>
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            Ты устал платить подрядчикам за непонятные задачи и не можешь оценить их работу
+          </p>
+        </li>
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            У тебя есть конкретная задача — квалификация лидов, работа с базой, автоматизация коммуникаций — и ты хочешь разобраться с ней под руководством
+          </p>
+        </li>
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            Тебе важна практика, а не теория: ты приходишь работать, а не слушать лекции
+          </p>
+        </li>
+
+        <li class="glass-card-light card-3d p-5 flex items-start gap-4">
+          <div class="icon-chip" style="width:36px;height:36px;border-radius:9px" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <p class="text-[#15171C] text-base leading-relaxed">
+            Ты готов потратить 2 дня, чтобы сэкономить месяцы проб и ошибок
+          </p>
+        </li>
+
+      </ul>
     </div>
-
-    <!-- 6 характеристик -->
-    <ul data-testid="fits-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16 list-none p-0 m-0">
-
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">
-          Ты владелец бизнеса или управляющий — и в твоей работе есть рутина, которую можно передать инструментам
-        </p>
-      </li>
-
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">
-          Ты не технарь и не хочешь им становиться — хочешь понимать AI ровно настолько, чтобы управлять им, а не зависеть от тех, кто «умеет»
-        </p>
-      </li>
-
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">
-          Ты устал платить подрядчикам за непонятные задачи и не можешь оценить их работу
-        </p>
-      </li>
-
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">
-          У тебя есть конкретная задача — квалификация лидов, работа с базой, автоматизация коммуникаций — и ты хочешь разобраться с ней под руководством
-        </p>
-      </li>
-
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">
-          Тебе важна практика, а не теория: ты приходишь работать, а не слушать лекции
-        </p>
-      </li>
-
-      <li class="card-float-light rounded-2xl p-5 flex items-start gap-4">
-        <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-          <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M1 4L4.5 7.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <p class="text-[#111111] text-base leading-relaxed">
-          Ты готов потратить 2 дня, чтобы сэкономить месяцы проб и ошибок
-        </p>
-      </li>
-
-    </ul>
 
     <!-- Блок — воркшоп НЕ для вас -->
     <div class="bg-[#111111] rounded-2xl p-8 border border-[#333333]">
@@ -414,14 +438,13 @@
 <!-- ============================================================
      СЕКЦИЯ 4 — 8 ЗАДАЧ (светлый фон)
      ============================================================ -->
-<section data-section="projects" id="projects" class="bg-light py-20 sm:py-28">
+<section data-section="projects" id="projects" class="bg-light py-12 sm:py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <hr class="divider-dashed-light mb-20" />
 
     <!-- Заголовок -->
     <div class="mb-6">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] mb-4">8 задач, которые разбирают на воркшопе</h2>
+      <h2 class="font-display font-light text-[#111111] mb-4" style="font-size:clamp(1.8rem,3.8vw,3.4rem);letter-spacing:-0.01em;text-transform:uppercase">8 задач, которые разбирают на воркшопе</h2>
       <p class="text-[#555555] text-base sm:text-lg leading-relaxed max-w-3xl">
         Каждый участник выбирает свою задачу. Арташес помогает её понять, разобрать архитектуру и запустить.
         Список — не программа «от А до Я», а меню: берёшь то, что нужно твоему бизнесу.
@@ -432,8 +455,8 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-12">
 
       <!-- A -->
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">A</div>
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="10" r="1.5" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1.5" fill="currentColor" stroke="none"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Бот-квиз для диагностики клиентов</h3>
         <p class="text-[#555555] text-sm leading-relaxed">
           Клиент приходит — бот задаёт вопросы, квалифицирует, передаёт тебе только целевых. Экономишь время менеджеров, не теряешь лиды.
@@ -441,8 +464,8 @@
       </div>
 
       <!-- B -->
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">B</div>
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8M12 17v4"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Лендинг — понимаешь как это работает</h3>
         <p class="text-[#555555] text-sm leading-relaxed">
           Не «сделать лендинг», а разобраться: что за ним стоит, сколько это реально стоит, где тебя обманывают подрядчики. Плюс — собираешь простой рабочий сайт за один день.
@@ -450,8 +473,8 @@
       </div>
 
       <!-- C -->
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">C</div>
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-1.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">WhatsApp-автоматизация</h3>
         <p class="text-[#555555] text-sm leading-relaxed">
           Рассылка по базе → автоматическая квалификация ответов. Кто интересуется — попадает в воронку. Кто нет — не занимает время команды.
@@ -459,8 +482,8 @@
       </div>
 
       <!-- D -->
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">D</div>
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v3m0 3v.5"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Парсер чатов и каналов</h3>
         <p class="text-[#555555] text-sm leading-relaxed">
           Мониторинг конкурентов, отраслевых каналов, упоминаний. AI собирает и структурирует — ты получаешь дайджест, а не поток сырых данных.
@@ -468,8 +491,8 @@
       </div>
 
       <!-- E -->
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">E</div>
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Митинги → задачи</h3>
         <p class="text-[#555555] text-sm leading-relaxed">
           Запись встречи (Zoom, Google Meet) → транскрипт → Claude вычленяет задачи → они автоматически уходят в чат команды. Встречи больше не теряются.
@@ -477,8 +500,8 @@
       </div>
 
       <!-- F -->
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">F</div>
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h.01M11 8h6M7 12h4M13 12h4"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">CRM-агент</h3>
         <p class="text-[#555555] text-sm leading-relaxed">
           Автоматические поздравления, follow-up после встречи, напоминания о продлении. AI работает с твоей базой — ты не забываешь про клиентов, которые «почти готовы».
@@ -486,8 +509,8 @@
       </div>
 
       <!-- G -->
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">G</div>
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Автоответчик в личных сообщениях и комментариях</h3>
         <p class="text-[#555555] text-sm leading-relaxed">
           AI отвечает на типовые вопросы в Instagram, Telegram, отрабатывает возражения, передаёт горячих — менеджеру. Без ботов-роботов, которые всех раздражают.
@@ -495,8 +518,8 @@
       </div>
 
       <!-- H -->
-      <div data-testid="project-card" class="card-float-light rounded-2xl p-6">
-        <div class="text-5xl font-black text-accent mb-3 leading-none">H</div>
+      <div data-testid="project-card" class="card-float-light card-3d rounded-2xl p-6">
+        <div class="icon-chip mb-3" style="width:46px;height:46px;border-radius:12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
         <h3 class="text-[#111111] font-bold text-lg mb-2">Парсер сайтов</h3>
         <p class="text-[#555555] text-sm leading-relaxed">
           Мониторинг цен конкурентов, анализ предложений на рынке. Знаешь, что происходит — раньше, чем это замечают другие.
@@ -512,14 +535,13 @@
 <!-- ============================================================
      СЕКЦИЯ 5 — ПРОГРАММА (светлый фон)
      ============================================================ -->
-<section data-section="program" id="program" class="bg-light py-20 sm:py-28">
+<section data-section="program" id="program" class="bg-light py-12 sm:py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <hr class="divider-dashed-light mb-20" />
 
     <!-- Заголовок -->
     <div class="mb-4">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#111111] mb-3">Что происходит 2 дня</h2>
+      <h2 class="font-display font-light text-[#111111] mb-3" style="font-size:clamp(1.8rem,3.8vw,3.4rem);letter-spacing:-0.01em;text-transform:uppercase">Что происходит 2 дня</h2>
       <p class="text-[#555555] text-base sm:text-lg max-w-2xl">
         Никаких презентаций ради галочки. Арташес работает рядом, отвечает на вопросы в процессе — не после.
       </p>
@@ -529,13 +551,16 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
 
       <!-- День 1 -->
-      <div class="card-float-light rounded-2xl p-8">
-        <div class="flex items-center gap-3 mb-8">
+      <div class="card-float-light card-3d rounded-2xl p-8">
+        <div class="flex items-center gap-3 mb-2">
           <div class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">День 1</div>
-          <h3 class="text-[#111111] font-black text-xl">Перестать бояться</h3>
+          <h3 class="text-[#111111] font-black text-xl">Сделать — не посмотреть</h3>
         </div>
+        <p class="text-[#555555] text-sm leading-relaxed mb-8">
+          Арташес доводит до результата. 90% тех, кто начинал самостоятельно — бросили, не увидев картины целиком. Здесь ты не сможешь слиться — потому что он ведёт за руку до конца.
+        </p>
 
-        <!-- Таймлайн -->
+        <!-- Таймлайн без времени -->
         <div class="flex flex-col gap-0">
 
           <div class="flex gap-4">
@@ -544,9 +569,8 @@
               <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
             </div>
             <div class="pb-6">
-              <div class="text-accent text-xs font-bold mb-1">10:00</div>
-              <div class="text-[#111111] font-semibold text-sm mb-1">Промптинг как навык</div>
-              <p class="text-[#555555] text-sm leading-relaxed">Живое задание с первых минут. Учишься ставить задачи AI так, чтобы получать нужный результат — это навык, не магия.</p>
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Разбор: что реально автоматизировать в твоём бизнесе</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Арташес смотрит на задачи конкретно — где узкое место, что AI закрывает за часы, а не недели.</p>
             </div>
           </div>
 
@@ -556,9 +580,8 @@
               <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
             </div>
             <div class="pb-6">
-              <div class="text-accent text-xs font-bold mb-1">11:30</div>
-              <div class="text-[#111111] font-semibold text-sm mb-1">Личный сайт-визитка за 40 минут</div>
-              <p class="text-[#555555] text-sm leading-relaxed">Барьер «это не моё, я не технарь» падает прямо здесь. Не потому что кто-то объяснил — потому что ты сам сделал.</p>
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Своя инфраструктура</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Поднимаем VPS (удалённый компьютер), подключаем Claude Code, ставим Telegram-бота. Первый раз в жизни — своё, не чужое.</p>
             </div>
           </div>
 
@@ -568,9 +591,8 @@
               <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
             </div>
             <div class="pb-6">
-              <div class="text-accent text-xs font-bold mb-1">14:00</div>
-              <div class="text-[#111111] font-semibold text-sm mb-1">Своя инфраструктура</div>
-              <p class="text-[#555555] text-sm leading-relaxed">VPS, Claude Code, Telegram-бот. Разбираешься, что это и зачем — на уровне пользователя, не разработчика.</p>
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Первая задача руками</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Собираешь что-то простое — сайт-визитку или бота. Не потому что объяснили, а потому что сделал сам.</p>
             </div>
           </div>
 
@@ -579,9 +601,8 @@
               <div class="timeline-dot"></div>
             </div>
             <div class="pb-4">
-              <div class="text-accent text-xs font-bold mb-1">16:00</div>
-              <div class="text-[#111111] font-semibold text-sm mb-1">Голосовой ввод Whisperflow</div>
-              <p class="text-[#555555] text-sm leading-relaxed">Диктуешь голосом → получаешь структурированный текст, задачи, письма. Инструмент, который меняет ежедневную работу с первого дня.</p>
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Голосовой ввод Whisperflow</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Диктуешь голосом → структурированный текст, задачи, письма. Скорость работы меняется с первого дня.</p>
             </div>
           </div>
 
@@ -596,7 +617,7 @@
       </div>
 
       <!-- День 2 -->
-      <div class="card-float-light rounded-2xl p-8">
+      <div class="card-float-light card-3d rounded-2xl p-8">
         <div class="flex items-center gap-3 mb-8">
           <div class="bg-[#111111] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">День 2</div>
           <h3 class="text-[#111111] font-black text-xl">Твой проект</h3>
@@ -611,9 +632,8 @@
               <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
             </div>
             <div class="pb-6">
-              <div class="text-accent text-xs font-bold mb-1">10:00</div>
-              <div class="text-[#111111] font-semibold text-sm mb-1">Индивидуальный разбор твоей задачи</div>
-              <p class="text-[#555555] text-sm leading-relaxed">Арташес смотрит на твой бизнес конкретно: где узкое место, что реально автоматизировать, что не стоит трогать.</p>
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Индивидуальный разбор твоей задачи</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Арташес смотрит на твой бизнес конкретно: где узкое место, что реально автоматизировать, что не стоит трогать.</p>
             </div>
           </div>
 
@@ -623,9 +643,8 @@
               <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
             </div>
             <div class="pb-6">
-              <div class="text-accent text-xs font-bold mb-1">11:30</div>
-              <div class="text-[#111111] font-semibold text-sm mb-1">Архитектура под твой бизнес</div>
-              <p class="text-[#555555] text-sm leading-relaxed">Не шаблон, а логика: как устроен инструмент, какие части нужны именно тебе, что можно упростить.</p>
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Архитектура под твой бизнес</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Не шаблон, а логика: как устроен инструмент, какие части нужны именно тебе, что можно упростить.</p>
             </div>
           </div>
 
@@ -635,9 +654,8 @@
               <div class="timeline-line flex-1 mt-1" style="height:60px"></div>
             </div>
             <div class="pb-6">
-              <div class="text-accent text-xs font-bold mb-1">13:30</div>
-              <div class="text-[#111111] font-semibold text-sm mb-1">Совместная сборка</div>
-              <p class="text-[#555555] text-sm leading-relaxed">Работаешь руками. Арташес рядом — направляет, объясняет, если застрял. Не делает за тебя.</p>
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Совместная сборка</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Работаешь руками. Арташес рядом — направляет, объясняет, если застрял. Не делает за тебя.</p>
             </div>
           </div>
 
@@ -646,9 +664,8 @@
               <div class="timeline-dot"></div>
             </div>
             <div class="pb-4">
-              <div class="text-accent text-xs font-bold mb-1">16:30</div>
-              <div class="text-[#111111] font-semibold text-sm mb-1">Запуск и план следующего шага</div>
-              <p class="text-[#555555] text-sm leading-relaxed">Проект запускается. Разбираете, что дальше: как масштабировать, кому передать, как контролировать.</p>
+              <div class="text-[#111111] font-semibold text-[15px] mb-1">Запуск и план следующего шага</div>
+              <p class="text-[#555555] text-[15px] leading-relaxed">Проект запускается. Разбираете, что дальше: как масштабировать, кому передать, как контролировать.</p>
             </div>
           </div>
 
@@ -669,13 +686,82 @@
 
 
 <!-- ============================================================
+     СЕКЦИЯ 5б — РЕЗУЛЬТАТЫ (тёмный фон)
+     ============================================================ -->
+<section data-section="results" id="results" class="bg-dark py-12 sm:py-16">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+    <div class="label-tag mb-6">Что уносишь с собой</div>
+    <h2 class="slide-h2 slide-h2-dark mb-3">Результаты, которые <span class="text-accent">останутся с тобой</span></h2>
+    <p class="text-[#9BA1AB] text-base sm:text-lg max-w-2xl leading-relaxed mb-14">
+      Не «знания» и не «инсайты». Четыре конкретные вещи, которые продолжают работать после того, как ты вернулся домой.
+    </p>
+
+    <div class="results-grid">
+
+      <div class="result-card card-3d">
+        <div class="result-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base mb-2">Свой AI-агент</h3>
+          <p class="text-[#9BA1AB] text-[15px] leading-relaxed">Собран под одну вашу конкретную задачу: парсер, ассистент в WhatsApp, обработчик заявок, аналитика. Уносите рабочим.</p>
+        </div>
+      </div>
+
+      <div class="result-card card-3d">
+        <div class="result-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            <path d="M7 8h5M7 11h3"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base mb-2">Личная VPS-инфраструктура</h3>
+          <p class="text-[#9BA1AB] text-[15px] leading-relaxed">Сервер, Telegram-бот, голосовой ввод, Claude Code. Поднимаете с нуля прямо за столом — дальше расширяете самостоятельно.</p>
+        </div>
+      </div>
+
+      <div class="result-card card-3d">
+        <div class="result-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base mb-2">Голос вместо клавиатуры</h3>
+          <p class="text-[#9BA1AB] text-[15px] leading-relaxed">Whisperflow настроен и работает. С момента, как вы начинаете говорить с AI, а не печатать — скорость работы меняется кардинально.</p>
+        </div>
+      </div>
+
+      <div class="result-card card-3d">
+        <div class="result-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-base mb-2">Другое мышление</h3>
+          <p class="text-[#9BA1AB] text-[15px] leading-relaxed">Главное. Вы перестаёте смотреть на AI как на чужую территорию и начинаете видеть в каждой задаче точку, куда его можно встроить.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
      СЕКЦИЯ 6 — СПИКЕР (тёмный фон)
      ============================================================ -->
-<section data-section="speaker" id="speaker" class="aurora-bg relative overflow-hidden py-20 sm:py-28">
+<section data-section="speaker" id="speaker" class="aurora-bg relative overflow-hidden py-12 sm:py-16">
   <div class="grid-lines"></div>
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-    <hr class="divider-dashed mb-16" />
 
     <!-- Label -->
     <div class="label-tag mb-6">Ведущий воркшопа</div>
@@ -685,14 +771,14 @@
       <!-- Фото слева -->
       <div class="flex justify-center lg:justify-start">
         <div class="speaker-photo-wrap float-anim">
-          <img src="./assets/img/artashes.jpg" alt="Арташес Григорян — ведущий AI Workshop" />
+          <img src="./assets/img/artashes.webp" alt="Арташес Григорян — ведущий AI Workshop" />
           <div class="speaker-photo-glow"></div>
         </div>
       </div>
 
       <!-- Текст справа -->
       <div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium text-white leading-tight mb-2">
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-tight mb-2" style="text-transform:uppercase;letter-spacing:-0.01em">
           Арташес Григорян
         </h2>
         <p class="text-accent font-sans font-semibold text-base tracking-wide mb-8">топ-5 брокер Whitewheel · Дубай</p>
@@ -729,17 +815,17 @@
 
         <!-- Статы -->
         <div class="grid grid-cols-3 gap-3">
-          <div class="card-float-dark rounded-xl p-4 text-center">
-            <div class="metric-number text-2xl sm:text-3xl">47</div>
-            <div class="text-text-secondary-dark font-sans text-xs mt-1">участников</div>
+          <div class="card-float-dark card-3d rounded-xl p-4 text-center">
+            <div class="metric-number counter text-xl sm:text-2xl" data-count="41">41</div>
+            <div class="text-text-secondary-dark font-sans text-xs mt-1">участников воркшопа</div>
           </div>
-          <div class="card-float-dark rounded-xl p-4 text-center">
-            <div class="metric-number text-xl sm:text-2xl">6500+</div>
-            <div class="text-text-secondary-dark font-sans text-xs mt-1">пользователей</div>
+          <div class="card-float-dark card-3d rounded-xl p-4 text-center">
+            <div class="metric-number counter text-xl sm:text-2xl" data-count="96">96%</div>
+            <div class="text-text-secondary-dark font-sans text-xs mt-1">получили результат</div>
           </div>
-          <div class="card-float-dark rounded-xl p-4 text-center">
-            <div class="metric-number text-2xl sm:text-3xl">96%</div>
-            <div class="text-text-secondary-dark font-sans text-xs mt-1">успешных</div>
+          <div class="card-float-dark card-3d rounded-xl p-4 text-center">
+            <div class="metric-number counter text-lg sm:text-xl" data-count="6500">6500+</div>
+            <div class="text-text-secondary-dark font-sans text-xs mt-1">пользователей brochurefinderbot.com</div>
           </div>
         </div>
       </div>
@@ -753,75 +839,32 @@
 <!-- ============================================================
      СЕКЦИЯ 7 — ОТЗЫВЫ (тёмный фон — как на сайте Арташеса)
      ============================================================ -->
-<section data-section="testimonials" id="testimonials" class="aurora-bg relative overflow-hidden py-20 sm:py-28">
-  <div class="grid-lines"></div>
+<section data-section="testimonials" id="testimonials" class="aurora-bg relative overflow-hidden py-12 sm:py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-    <hr class="divider-dashed mb-16" />
 
     <!-- Заголовок -->
     <div class="mb-4">
       <div class="label-tag mb-4">Отзывы участников</div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium text-white mb-4">Что говорят те,<br />кто прошёл</h2>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-white mb-4" style="text-transform:uppercase;letter-spacing:-0.01em">Что говорят те,<br />кто прошёл</h2>
       <p class="text-text-secondary-dark font-sans text-base sm:text-lg max-w-2xl leading-relaxed">
         Видео сняты на выходе сразу после второго дня. Цитаты — из сообщений участников вечером Дня 1 и после Дня 2. Без подготовки, без редактуры.
       </p>
     </div>
 
     <!-- Видео-отзывы -->
-    <div class="video-grid mt-12 mb-16">
-
-      <div class="video-thumb card-3d">
-        <div class="video-thumb-bg">
-          <div style="width:100%;height:100%;background:linear-gradient(160deg,#2A1810 0%,#1C1612 100%);display:flex;align-items:center;justify-content:center;">
-            <svg viewBox="0 0 80 120" fill="none" style="width:40%;opacity:0.15">
-              <ellipse cx="40" cy="35" rx="22" ry="24" fill="white"/>
-              <path d="M5 120 C5 80 75 80 75 120" fill="white"/>
-            </svg>
-          </div>
-        </div>
-        <div class="play-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <div class="video-thumb-label">
-          участница, MBA<br />10+ лет управления бизнесами
+    <div class="mt-12 mb-8 flex justify-center">
+      <div style="width:100%;max-width:324px;border-radius:16px;overflow:hidden;border:1px solid rgba(232,114,42,0.3);box-shadow:0 0 40px rgba(232,114,42,0.08),0 20px 48px rgba(0,0,0,0.5)">
+        <video
+          controls
+          preload="metadata"
+          style="width:100%;display:block;background:#0D0F14"
+          src="./assets/video.mp4"
+        ></video>
+        <div style="padding:14px 18px;background:rgba(13,15,20,0.95);border-top:1px solid rgba(255,255,255,0.06)">
+          <p style="margin:0;font-family:var(--f-sans);font-size:13px;color:#9BA1AB;line-height:1.5">Видео снято на выходе после второго дня. Без подготовки, без редактуры.</p>
         </div>
       </div>
-
-      <div class="video-thumb card-3d">
-        <div class="video-thumb-bg">
-          <div style="width:100%;height:100%;background:linear-gradient(160deg,#1C2010 0%,#1C1612 100%);display:flex;align-items:center;justify-content:center;">
-            <svg viewBox="0 0 80 120" fill="none" style="width:40%;opacity:0.15">
-              <ellipse cx="40" cy="35" rx="22" ry="24" fill="white"/>
-              <path d="M5 120 C5 80 75 80 75 120" fill="white"/>
-            </svg>
-          </div>
-        </div>
-        <div class="play-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <div class="video-thumb-label">
-          предприниматель<br />Дубай
-        </div>
-      </div>
-
-      <div class="video-thumb card-3d">
-        <div class="video-thumb-bg">
-          <div style="width:100%;height:100%;background:linear-gradient(160deg,#201820 0%,#1C1612 100%);display:flex;align-items:center;justify-content:center;">
-            <svg viewBox="0 0 80 120" fill="none" style="width:40%;opacity:0.15">
-              <ellipse cx="40" cy="35" rx="22" ry="24" fill="white"/>
-              <path d="M5 120 C5 80 75 80 75 120" fill="white"/>
-            </svg>
-          </div>
-        </div>
-        <div class="play-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <div class="video-thumb-label">
-          участница<br />вечер после Дня 1
-        </div>
-      </div>
-
     </div>
 
     <!-- Цитаты — большие, serif italic как на сайте Арташеса -->
@@ -856,11 +899,11 @@
       </div>
 
       <!-- Итог -->
-      <div class="card-float-dark rounded-2xl p-6 text-center">
-        <div class="metric-number mb-2">96%</div>
-        <p class="text-text-secondary-dark font-sans text-base leading-relaxed">
+      <div class="card-float-dark card-3d rounded-2xl p-6 text-center">
+        <div class="metric-number counter mb-2" data-count="96">96%</div>
+        <p class="font-sans font-light text-[#9BA1AB] text-base leading-relaxed">
           участников уходят со второго дня с готовым решением под свою задачу.<br />
-          <span class="text-white font-semibold">47 выпускников. Первые — топовые риелторы и владельцы агентств Дубая.</span>
+          <span class="text-white font-medium">41 выпускник. Первые — топовые риелторы и владельцы агентств Дубая.</span>
         </p>
       </div>
 
@@ -873,16 +916,15 @@
 <!-- ============================================================
      СЕКЦИЯ 8 — ОФФЕР (тёмный фон)
      ============================================================ -->
-<section data-section="offer" id="offer" class="bg-dark py-20 sm:py-28">
+<section data-section="offer" id="offer" class="bg-dark py-12 sm:py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <hr class="divider-dashed mb-20" />
 
     <!-- Заголовок -->
     <div class="mb-12">
       <div class="inline-flex items-baseline gap-3 mb-3">
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-accent">2000 AED</h2>
-        <span class="text-white text-2xl font-bold">— что входит</span>
+        <h2 class="font-display font-light text-accent" style="font-size:clamp(2.8rem,6vw,5rem);letter-spacing:-0.02em">2000 AED</h2>
+        <span class="font-display font-light text-white" style="font-size:clamp(1.2rem,2.5vw,1.8rem)">— что входит</span>
       </div>
     </div>
 
@@ -894,49 +936,54 @@
         <h3 class="text-white font-bold text-lg mb-5">Включено в стоимость</h3>
         <div class="flex flex-col gap-3 mb-10">
 
-          <div class="flex items-start gap-3">
-            <div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <div class="offer-check card-3d">
+            <div class="offer-check-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
             </div>
-            <p class="text-[#CCCCCC] text-base leading-relaxed">2 полных дня практики с Арташесом (10:00–18:00)</p>
+            <div class="offer-check-text">
+              <strong>2 дня практики с Арташесом</strong>
+              <span>10:00–18:00, оба дня — лично, не в записи, не онлайн</span>
+            </div>
           </div>
 
-          <div class="flex items-start gap-3">
-            <div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <div class="offer-check card-3d">
+            <div class="offer-check-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
-            <p class="text-[#CCCCCC] text-base leading-relaxed">Группа максимум 10 человек — Арташес успевает разобрать задачу каждого</p>
+            <div class="offer-check-text">
+              <strong>Группа до 10 человек</strong>
+              <span>Каждый получает время лично с Арташесом — не в потоке, а под свою задачу</span>
+            </div>
           </div>
 
-          <div class="flex items-start gap-3">
-            <div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <div class="offer-check card-3d">
+            <div class="offer-check-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 12l2 2 4-4"/></svg>
             </div>
-            <p class="text-[#CCCCCC] text-base leading-relaxed">Индивидуальный разбор твоего бизнеса и твоей задачи на второй день</p>
+            <div class="offer-check-text">
+              <strong>Гарантия результата</strong>
+              <span>AI-агент работает к концу второго дня — или возвращаем деньги</span>
+            </div>
           </div>
 
-          <div class="flex items-start gap-3">
-            <div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <div class="offer-check card-3d">
+            <div class="offer-check-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M7 7h.01M11 7h6M7 11h4M13 11h4"/></svg>
             </div>
-            <p class="text-[#CCCCCC] text-base leading-relaxed">Доступ к материалам и инструкциям после воркшопа</p>
+            <div class="offer-check-text">
+              <strong>VPS + Claude Max — настраиваем прямо за столом</strong>
+              <span>Уходишь с работающей инфраструктурой, не с «инструкцией настроить дома»</span>
+            </div>
           </div>
 
-          <div class="flex items-start gap-3">
-            <div class="w-5 h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <div class="offer-check card-3d">
+            <div class="offer-check-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
-            <p class="text-[#CCCCCC] text-base leading-relaxed">Чат группы — можно задавать вопросы после</p>
+            <div class="offer-check-text">
+              <strong>Закрытый чат и материалы</strong>
+              <span>Поддержка после того, как разошлись — вопросы, обновления, новые кейсы</span>
+            </div>
           </div>
 
         </div>
@@ -1021,15 +1068,104 @@
 
 
 <!-- ============================================================
+     СЕКЦИЯ FAQ (тёмный фон)
+     ============================================================ -->
+<section data-section="faq" id="faq" class="bg-dark py-12 sm:py-16">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+    <div class="label-tag mb-6">Вопросы</div>
+    <h2 class="slide-h2 slide-h2-dark mb-14">Частые <span class="text-accent">вопросы</span></h2>
+
+    <div class="flex flex-col">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Я не технарь. Точно справлюсь?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Большинство участников никогда не работали с кодом и серверами. Арташес объясняет на уровне пользователя — не разработчика. К концу первого дня вы уже сделали что-то руками. Это и есть доказательство.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>А если я что-то не пойму по ходу?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Группа до 10 человек — Арташес работает рядом, отвечает в процессе. Не «после» и не «задайте вопрос в чат». Застряли — он рядом.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Если оплачу, а в эти даты не получится — оплата сгорит?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Нет. Переносим на следующий поток без доплат. Если ни один поток не подойдёт — возвращаем деньги. Уточняйте условия при записи.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Как проходит оплата и насколько это безопасно?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            После заявки Арташес напишет в Telegram и подтвердит участие. Оплата — по реквизитам напрямую, без посредников. Дубай, безопасная юрисдикция.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>Что взять с собой и зачем ещё ~500 AED?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Ноутбук и карту для оплаты онлайн-сервисов. ~500 AED — это Claude Max (подписка на AI) + VPS-сервер на первый месяц. Без этих инструментов инфраструктуру не поднять. Обе подписки отменяются в любой момент.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span>А после тренинга всё это продолжит работать?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Да. Всё что вы собираете — ваше. VPS работает пока вы платите ~50 AED/мес. Claude — пока активна подписка. Агент, который вы написали — работает независимо. Плюс чат группы: вопросы можно задавать после.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
      СЕКЦИЯ 9 — ЗАЯВКА (anchor для навигации)
      ============================================================ -->
-<section data-section="apply" id="apply" class="aurora-bg py-20 sm:py-24">
+<section data-section="apply" id="apply" class="aurora-bg py-12 sm:py-16">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-    <hr class="divider-dashed mb-16" />
 
     <div class="label-tag mb-6">Участие</div>
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium text-white mb-5">
+    <h2 class="font-display font-light text-white mb-5" style="font-size:clamp(1.8rem,3.8vw,3.4rem);text-transform:uppercase;letter-spacing:-0.01em">
       Готовы к двум дням,<br />которые изменят ваш бизнес?
     </h2>
     <p class="text-text-secondary-dark font-sans text-base sm:text-lg max-w-xl mx-auto leading-relaxed mb-10">
@@ -1057,7 +1193,7 @@
     <!-- Заголовок -->
     <div class="mb-7 pr-8">
       <div class="label-tag mb-3">Участие</div>
-      <h3 class="text-2xl sm:text-3xl font-medium text-white mb-2">Подать заявку</h3>
+      <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-2">Подать заявку</h3>
       <p class="text-text-secondary-dark font-sans text-sm leading-relaxed">
         После заявки — Арташес напишет в Telegram и подтвердит участие.
       </p>
@@ -1163,23 +1299,6 @@
             />
           </div>
 
-          <!-- 7. Предпочитаемая дата -->
-          <div class="sm:col-span-2">
-            <label for="field-date" class="block text-[#CCCCCC] text-sm font-medium mb-2">
-              Предпочитаемая дата <span class="text-accent">*</span>
-            </label>
-            <select
-              id="field-date"
-              name="preferred_date"
-              required
-              class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer"
-            >
-              <option value="" disabled selected>Выберите удобный вариант</option>
-              <option value="nearest">Ближайшая доступная дата</option>
-              <option value="july-2026">Июль 2026</option>
-              <option value="august-2026">Август 2026</option>
-            </select>
-          </div>
 
           <!-- 8. Задача — textarea -->
           <div class="sm:col-span-2">
@@ -1262,9 +1381,9 @@
         class="hidden mt-4 text-center py-8"
       >
         <div class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-5">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#E8580A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3 class="text-white text-2xl font-medium mb-3">Заявка принята</h3>
+        <h3 class="font-display text-white text-2xl font-extrabold mb-3">Заявка принята</h3>
         <p class="text-text-secondary-dark font-sans text-base leading-relaxed mb-8 max-w-sm mx-auto">
           Арташес получил её и напишет вам в Telegram в течение дня.<br />
           Если удобно — напишите ему сами, чтобы не ждать.
@@ -1355,11 +1474,14 @@
 
     </div>
 
-    <hr class="divider-dashed mb-6" />
 
     <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#555555]">
       <span>&copy; 2026 AI Workshop. Все права защищены.</span>
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-4">
+        <span>Сайт создан <a href="https://agortex.com/ai" target="_blank" rel="noopener" class="hover:text-white transition-colors" style="color:#9BA1AB">Agortex</a></span>
+        <span style="color:#333">·</span>
+        <a href="https://agortex.com/ai" target="_blank" rel="noopener" class="hover:text-white transition-colors" style="color:#E8722A">Заказать сайт</a>
+        <span style="color:#333">·</span>
         <span class="text-white bg-accent px-2 py-0.5 rounded font-bold">RU</span>
         <a href="./en/" class="hover:text-white transition-colors">EN</a>
       </div>
@@ -1374,34 +1496,60 @@
      ============================================================ -->
 <script>
   // ---- Бургер-меню ----
-  (function () {
+  document.addEventListener('DOMContentLoaded', function () {
     var btn   = document.getElementById('burger-btn');
     var menu  = document.getElementById('mobile-menu');
+    var nav   = document.querySelector('nav[data-testid="nav"]');
+    if (!btn || !menu) return;
     var lines = btn.querySelectorAll('.burger-line');
 
-    btn.addEventListener('click', function () {
-      var isOpen = menu.classList.contains('open');
-      menu.classList.toggle('open');
-      if (!isOpen) {
-        lines[0].style.transform = 'translateY(8px) rotate(45deg)';
-        lines[1].style.opacity   = '0';
-        lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
-      } else {
-        lines[0].style.transform = '';
-        lines[1].style.opacity   = '';
-        lines[2].style.transform = '';
-      }
-    });
+    // Оверлей — затемняет страницу за меню, закрывает по тапу
+    var overlay = document.createElement('div');
+    overlay.id = 'nav-overlay';
+    document.body.appendChild(overlay);
+
+    function closeBurger() {
+      menu.classList.remove('open');
+      nav  && nav.classList.remove('menu-open');
+      overlay.classList.remove('active');
+      document.body.classList.remove('nav-open');
+      lines[0].style.transform = '';
+      lines[1].style.opacity   = '';
+      lines[2].style.transform = '';
+    }
+
+    function openBurger() {
+      menu.classList.add('open');
+      nav  && nav.classList.add('menu-open');
+      overlay.classList.add('active');
+      document.body.classList.add('nav-open');
+      lines[0].style.transform = 'translateY(8px) rotate(45deg)';
+      lines[1].style.opacity   = '0';
+      lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+    }
+
+    function toggleBurger(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      menu.classList.contains('open') ? closeBurger() : openBurger();
+    }
+
+    btn.addEventListener('click',      toggleBurger);
+    btn.addEventListener('touchstart', toggleBurger, { passive: false });
+    overlay.addEventListener('click',      closeBurger);
+    overlay.addEventListener('touchstart', closeBurger, { passive: true });
 
     menu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        menu.classList.remove('open');
-        lines[0].style.transform = '';
-        lines[1].style.opacity   = '';
-        lines[2].style.transform = '';
-      });
+      link.addEventListener('click', closeBurger);
     });
-  })();
+
+    // Автозакрытие при скролле > 60px
+    var lastY = window.scrollY;
+    window.addEventListener('scroll', function () {
+      if (menu.classList.contains('open') && Math.abs(window.scrollY - lastY) > 60) closeBurger();
+      lastY = window.scrollY;
+    }, { passive: true });
+  });
 
 
   // ---- Modal: открыть / закрыть ----
@@ -1461,7 +1609,7 @@
       if (!valid) return;
 
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Отправляю...';
+      submitBtn.innerHTML = '<span class="spinner" aria-hidden="true"></span>Отправляю...';
       submitBtn.style.opacity = '0.7';
 
       setTimeout(function () {
@@ -1486,8 +1634,9 @@
   })();
 
 
-  // ---- 3D-карточки: наклон при наведении ----
+  // ---- 3D-карточки: наклон при наведении (только десктоп) ----
   (function () {
+    if (window.matchMedia('(hover: none)').matches) return; // touch-устройства — пропускаем
     document.querySelectorAll('.card-3d').forEach(function (card) {
       card.addEventListener('mousemove', function (e) {
         var rect = card.getBoundingClientRect();
@@ -1504,6 +1653,32 @@
   })();
 
 
+  // ---- Появление секций при скролле ----
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    // Hero-секция всегда видна сразу — не скрываем её элементы
+    var targets = document.querySelectorAll('[data-section]:not([data-section="hero"]) > div > *');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    targets.forEach(function (el) {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+    // Fallback: если через 1.2с элемент всё ещё скрыт — показать
+    setTimeout(function () {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(function (el) {
+        el.classList.add('visible');
+      });
+    }, 1200);
+  })();
+
+
   // ---- Подсветка активного пункта навигации при скролле ----
   (function () {
     var sections = document.querySelectorAll('[data-section]');
@@ -1517,10 +1692,10 @@
       });
       navLinks.forEach(function (link) {
         link.classList.remove('text-white');
-        link.classList.add('text-[#B8AFA8]');
+        link.classList.add('text-[#9BA1AB]');
         var href = link.getAttribute('href').replace('#', '');
         if (href === current) {
-          link.classList.remove('text-[#B8AFA8]');
+          link.classList.remove('text-[#9BA1AB]');
           link.classList.add('text-white');
         }
       });
@@ -1529,6 +1704,60 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   })();
+
+
+
+
+  // ---- Счётчики: анимация с нуля при входе в вьюпорт ----
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var counters = document.querySelectorAll('.counter[data-count]');
+    function animateCounter(el) {
+      var target = parseFloat(el.getAttribute('data-count'));
+      var isPercent = el.textContent.includes('%');
+      var isPlus = el.textContent.includes('+');
+      var suffix = (isPercent ? '%' : '') + (isPlus ? '+' : '');
+      var duration = 1400;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var ease = 1 - Math.pow(1 - progress, 3);
+        var val = Math.round(ease * target);
+        el.textContent = val + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      el.textContent = '0' + suffix;
+      requestAnimationFrame(step);
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function (el) { io.observe(el); });
+  })();
+
+
+  // ---- FAQ аккордеон ----
+  function toggleFaq(btn) {
+    var item = btn.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    // Закрыть все
+    document.querySelectorAll('.faq-item.open').forEach(function (i) {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').style.maxHeight = '0';
+    });
+    // Открыть текущий если был закрыт
+    if (!isOpen) {
+      item.classList.add('open');
+      var answer = item.querySelector('.faq-answer');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  }
 </script>
 
 </body>

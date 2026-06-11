@@ -8,7 +8,7 @@
   <meta property="og:title" content="AI Workshop — 2 Days in Dubai for Business Owners" />
   <meta property="og:description" content="Hands-on offline AI workshop. 2 days of practice — you leave with a working AI tool tailored to your task." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23FF6200'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,sans-serif' font-weight='900' font-size='18' fill='white'>AI</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23E87A2E'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,sans-serif' font-weight='900' font-size='18' fill='white'>AI</text></svg>" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -18,12 +18,13 @@
       theme: {
         extend: {
           colors: {
-            dark:    '#0A0A0A',
-            light:   '#F0F0F2',
-            accent:  '#FF6200',
+            dark:    '#0D0F14',
+            light:   '#ECEDEF',
+            accent:  '#E87A2E',
           },
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'Inter', 'sans-serif'],
           },
         }
       }
@@ -200,7 +201,7 @@
         <thead>
           <tr>
             <th class="text-left p-4 rounded-tl-2xl w-1/2">Before</th>
-            <th class="text-left p-4 rounded-tr-2xl w-1/2" style="background:rgba(255,98,0,0.2);color:#FF6200;">After</th>
+            <th class="th-accent text-left p-4 rounded-tr-2xl w-1/2">After</th>
           </tr>
         </thead>
         <tbody>
@@ -467,7 +468,15 @@
         45 out of 47 participants successfully completed the workshop. <strong class="text-[#111111]">96%</strong> leave with a ready solution for their task. First participants: top realtors and agency owners in Dubai.
       </p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
+    <div class="flex justify-center mt-12 mb-10">
+      <div style="width:100%;max-width:324px;border-radius:16px;overflow:hidden;border:1px solid rgba(232,114,42,0.3);box-shadow:0 0 40px rgba(232,114,42,0.08),0 20px 48px rgba(0,0,0,0.15)">
+        <video controls preload="metadata" style="width:100%;display:block;background:#0D0F14" src="../assets/video.mp4"></video>
+        <div style="padding:14px 18px;background:rgba(240,240,240,0.95);border-top:1px solid rgba(0,0,0,0.06)">
+          <p style="margin:0;font-size:13px;color:#666;line-height:1.5">Video recorded right after Day 2. Unscripted, unedited.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <div data-testid="testimonial-item" class="card-float-light rounded-2xl p-7 flex flex-col">
         <span class="quote-mark">"</span>
         <blockquote class="text-[#111111] text-lg font-semibold leading-snug mb-4 flex-1">Today my world turned 180 degrees</blockquote>
@@ -589,15 +598,6 @@
             <input type="text" id="field-city" name="city" placeholder="Dubai, Moscow, Almaty..." required class="form-field-dark w-full rounded-xl px-4 py-3 text-sm" />
           </div>
           <div class="sm:col-span-2">
-            <label for="field-date" class="block text-[#CCCCCC] text-sm font-medium mb-2">Preferred date <span class="text-accent">*</span></label>
-            <select id="field-date" name="preferred_date" required class="form-field-dark w-full rounded-xl px-4 py-3 text-sm appearance-none cursor-pointer">
-              <option value="" disabled selected>Choose a convenient option</option>
-              <option value="nearest">Nearest available date</option>
-              <option value="july-2026">July 2026</option>
-              <option value="august-2026">August 2026</option>
-            </select>
-          </div>
-          <div class="sm:col-span-2">
             <label for="field-task" class="block text-[#CCCCCC] text-sm font-medium mb-2">Your task <span class="text-accent">*</span></label>
             <textarea id="field-task" name="task" rows="4" placeholder="Describe briefly: what you want to automate or what request you're bringing to the workshop" required class="form-field-dark w-full rounded-xl px-4 py-3 text-sm resize-none"></textarea>
           </div>
@@ -690,7 +690,11 @@
     <hr class="divider-dashed mb-6" />
     <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#555555]">
       <span>&copy; 2026 AI Workshop. All rights reserved.</span>
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-4">
+        <span>Built by <a href="https://agortex.com/ai" target="_blank" rel="noopener" class="hover:text-white transition-colors" style="color:#9BA1AB">Agortex</a></span>
+        <span style="color:#333">·</span>
+        <a href="https://agortex.com/ai" target="_blank" rel="noopener" class="hover:text-white transition-colors" style="color:#E8722A">Order a website</a>
+        <span style="color:#333">·</span>
         <a href="../index.html" class="hover:text-white transition-colors">RU</a>
         <span class="text-white bg-accent px-2 py-0.5 rounded font-bold">EN</span>
       </div>
