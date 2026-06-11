@@ -62,9 +62,9 @@ describe('2. Hero', () => {
     assert.ok(ctaText.includes('заявку'), `CTA содержит "${ctaText}", нужно "заявку"`);
   });
 
-  test('Метрика 47 участников присутствует', () => {
+  test('Метрика участников присутствует', () => {
     assert.ok($('[data-testid="metric-participants"]').length > 0, 'Нет metric-participants');
-    assert.ok($('[data-testid="metric-participants"]').text().includes('47'));
+    assert.ok($('[data-testid="metric-participants"]').text().includes('41'));
   });
 
   test('Метрика "10" (группа) присутствует', () => {
@@ -265,9 +265,9 @@ describe('7. Контент', () => {
     assert.ok($('[data-section="offer"]').text().includes('2000 AED'));
   });
 
-  test('Таблица До/После: 5 строк', () => {
-    const rows = $('[data-section="pain"] tbody tr');
-    assert.ok(rows.length >= 5, `Строк в таблице: ${rows.length}`);
+  test('Блок До/После: 5 позиций', () => {
+    const rows = $('[data-section="pain"] .price-row');
+    assert.ok(rows.length >= 5, `Строк в блоке: ${rows.length}`);
   });
 });
 

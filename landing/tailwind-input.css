@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Исправление кавычек для шрифтов с пробелами */
+@layer utilities {
+  .font-sans    { font-family: 'Wix Madefor Display', system-ui, sans-serif; }
+  .font-display { font-family: 'Unbounded', 'Wix Madefor Display', system-ui, sans-serif; }
+}
