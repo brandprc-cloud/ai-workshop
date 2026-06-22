@@ -1,0 +1,21 @@
+# Личные переписки и выгрузки — НИКОГДА в git
+materials/чаты/
+materials/чаты/**
+
+# Доступы, ссылки на админки, факты с цифрами — не в git
+materials/_private/
+materials/_private/**
+
+# Секреты
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+*session*
+*.session
+
+# Мусор
+node_modules/
+.DS_Store
+*.log
